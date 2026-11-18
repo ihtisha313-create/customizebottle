@@ -7,7 +7,7 @@ export const siteConfig = {
   minimumOrder: 500,
   location: "Peshawar, Pakistan",
   tagline: "Your Brand. On Every Bottle.",
-  heroImage: "https://images.unsplash.com/photo-1616118271138-b14e3a69a3ca?auto=format&fit=crop&w=2000&q=88",
+  heroImage: "/images/customizebottle-hero.webp",
 };
 
 export function whatsappUrl(message?: string) {
