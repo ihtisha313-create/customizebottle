@@ -54,8 +54,7 @@ The domain is configured in the site metadata as https://customisebottle.com. Co
 
 ## Images
 
-- public/images/hero-bottles.webp is an original generated product photograph.
-- Industry setting imagery is loaded from Unsplash image URLs at present. Replace or locally host these images before launch if preferred, and confirm your chosen image use complies with the image provider's terms.
+The hero uses a clear-bottle product photo hosted on Unsplash. Hospitality, restaurant, healthcare and event imagery also uses Unsplash image URLs. Review the photo licensing terms and consider locally hosting approved images before launch.
 
 ## Important launch note
 
