@@ -13,7 +13,10 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   compress: true,
   images: {
-    remotePatterns: [{ protocol: "https", hostname: "images.unsplash.com", pathname: "/**" }],
+    remotePatterns: [
+      { protocol: "https", hostname: "download.pakutaso.com", pathname: "/shared/img/thumb/**" },
+      { protocol: "https", hostname: "images.pexels.com", pathname: "/photos/**" },
+    ],
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 60 * 60 * 24 * 7,
   },

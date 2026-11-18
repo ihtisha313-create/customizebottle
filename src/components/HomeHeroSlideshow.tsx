@@ -6,20 +6,16 @@ import { useEffect, useState } from "react";
 
 const slides = [
   {
-    src: "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=3840&q=90",
-    alt: "Clear drinking-water bottle in soft natural studio light"
+    src: "https://download.pakutaso.com/shared/img/thumb/petIMGL5660.jpg",
+    alt: "Two clear, unbranded 500 ml bottled-water bottles photographed in a bright studio"
   },
   {
-    src: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=3840&q=90",
-    alt: "Refined hotel interior prepared for a guest stay"
+    src: "https://images.pexels.com/photos/11860563/pexels-photo-11860563.jpeg",
+    alt: "Clear unbranded plastic drinking-water bottle with a blue cap on a white studio backdrop"
   },
   {
-    src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=3840&q=90",
-    alt: "Carefully arranged fine-dining restaurant table"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=3840&q=90",
-    alt: "Elegant event setting with floral table arrangements"
+    src: "https://images.pexels.com/photos/11860559/pexels-photo-11860559.jpeg",
+    alt: "Clear unbranded water bottle photographed against a clean blue studio background"
   }
 ];
 
