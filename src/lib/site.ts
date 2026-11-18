@@ -1,0 +1,15 @@
+export const siteConfig = {
+  name: "CustomizeBottle",
+  domain: "https://customisebottle.com",
+  whatsappNumber: "923468889433",
+  whatsappDisplay: "+92 346 888 9433",
+  minimumOrder: 500,
+  location: "Peshawar, Pakistan",
+  tagline: "Your Brand. On Every Bottle.",
+  heroImage: "https://images.unsplash.com/photo-1616118271138-b14e3a69a3ca?auto=format&fit=crop&w=2000&q=88",
+};
+
+export function whatsappUrl(message?: string) {
+  const base = "https://wa.me/" + siteConfig.whatsappNumber;
+  return message ? base + "?text=" + encodeURIComponent(message) : base;
+}
