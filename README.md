@@ -5,8 +5,8 @@ Premium B2B website for customized drinking-water bottle supply.
 ## Confirmed business details
 
 - Brand: CustomizeBottle
-- Intended domain: https://customisebottle.com (not connected yet)
-- Temporary Vercel address: https://customizebottle.vercel.app
+- Current live address and canonical domain: https://customizebottle.vercel.app
+- Planned custom domain: https://customisebottle.com (not connected yet)
 - WhatsApp: +92 346 888 9433
 - Starting product: 500 ml customized bottled water
 - Minimum order: 500 bottles
@@ -49,7 +49,7 @@ Requirements: Node.js 20.9 or later and npm.
 
 The GitHub repository is linked to the Vercel project named customisebottle. Pushes to main trigger a production deployment. The Vercel project is configured for Next.js and Node 22. Preview deployments remain protected; production is configured to be publicly accessible.
 
-The intended custom domain is customisebottle.com. It has deliberately not been connected yet. Add it only after launch review and once you control its DNS settings.
+The live site currently uses the Vercel address for canonical URLs and the sitemap. The planned custom domain, customisebottle.com, has deliberately not been connected. When it is added to Vercel and its DNS is configured, update siteConfig.domain to the custom domain and redeploy so canonical URLs, metadata and sitemap move together.
 
 ## Performance and security
 

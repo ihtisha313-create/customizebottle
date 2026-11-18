@@ -1,6 +1,7 @@
 export const siteConfig = {
   name: "CustomizeBottle",
-  domain: "https://customisebottle.com",
+  domain: "https://customizebottle.vercel.app",
+  plannedCustomDomain: "https://customisebottle.com",
   whatsappNumber: "923468889433",
   whatsappDisplay: "+92 346 888 9433",
   minimumOrder: 500,
