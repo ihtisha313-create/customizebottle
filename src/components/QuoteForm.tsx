@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import type { FormEvent } from "react";
 import { Icon } from "@/components/Icons";
@@ -9,7 +8,8 @@ export default function QuoteForm() {
   const [name, setName] = useState("");
   const [business, setBusiness] = useState("");
   const [businessType, setBusinessType] = useState("Hotel");
-  const [quantity, setQuantity] = useState("500");
+  const [phone, setPhone] = useState("");
+  const [quantity, setQuantity] = useState(String(siteConfig.minimumOrder));
   const [city, setCity] = useState("Peshawar");
   const [details, setDetails] = useState("");
   const [error, setError] = useState("");
@@ -21,7 +21,7 @@ export default function QuoteForm() {
       return;
     }
     const amount = Number(quantity);
-    if (!Number.isInteger(amount) || amount < siteConfig.minimumOrder) {
+    if (!Number.isSafeInteger(amount) || amount < siteConfig.minimumOrder) {
       setError("The minimum order is " + siteConfig.minimumOrder + " bottles. Please enter " + siteConfig.minimumOrder + " or more.");
       return;
     }
@@ -32,6 +32,7 @@ export default function QuoteForm() {
       "Name: " + name.trim(),
       "Business: " + business.trim(),
       "Business type: " + businessType,
+      "Preferred contact number: " + (phone.trim() || "Not provided"),
       "Bottle size: 500 ml",
       "Estimated quantity: " + amount + " bottles",
       "Delivery city: " + city.trim(),
@@ -43,16 +44,17 @@ export default function QuoteForm() {
   return (
     <form className="quote-form" onSubmit={handleSubmit}>
       <div className="form-grid">
-        <label className="form-field"><span>Your name *</span><input value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter your name" autoComplete="name" required /></label>
-        <label className="form-field"><span>Business name *</span><input value={business} onChange={(e) => setBusiness(e.target.value)} placeholder="Hotel, restaurant or company" required /></label>
+        <label className="form-field"><span>Your name *</span><input value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter your name" autoComplete="name" maxLength={100} required /></label>
+        <label className="form-field"><span>Business name *</span><input value={business} onChange={(e) => setBusiness(e.target.value)} placeholder="Hotel, restaurant or company" autoComplete="organization" maxLength={120} required /></label>
         <label className="form-field"><span>Business type</span><select value={businessType} onChange={(e) => setBusinessType(e.target.value)}><option>Hotel</option><option>Restaurant / Cafe</option><option>Hospital / Clinic</option><option>Wedding Hall</option><option>Corporate / Event</option><option>Catering</option><option>Other</option></select></label>
-        <label className="form-field"><span>Estimated quantity *</span><input type="number" min={siteConfig.minimumOrder} step="1" value={quantity} onChange={(e) => setQuantity(e.target.value)} required /><small>Minimum order: {siteConfig.minimumOrder} bottles</small></label>
-        <label className="form-field form-field-full"><span>Delivery city *</span><input value={city} onChange={(e) => setCity(e.target.value)} placeholder="e.g. Peshawar" required /></label>
-        <label className="form-field form-field-full"><span>Tell us about your requirements</span><textarea value={details} onChange={(e) => setDetails(e.target.value)} rows={4} placeholder="Share your preferred label style, logo details or any other requirements..." /></label>
+        <label className="form-field"><span>Preferred contact number</span><input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Optional phone / WhatsApp" autoComplete="tel" maxLength={30} /></label>
+        <label className="form-field"><span>Estimated quantity *</span><input type="number" min={siteConfig.minimumOrder} max="1000000" step="1" value={quantity} onChange={(e) => setQuantity(e.target.value)} required /><small>Minimum order: {siteConfig.minimumOrder} bottles</small></label>
+        <label className="form-field"><span>Delivery city *</span><input value={city} onChange={(e) => setCity(e.target.value)} placeholder="e.g. Peshawar" autoComplete="address-level2" maxLength={100} required /></label>
+        <label className="form-field form-field-full"><span>Tell us about your requirements</span><textarea value={details} onChange={(e) => setDetails(e.target.value)} rows={4} maxLength={800} placeholder="Share your preferred label style, logo details or any other requirements..." /></label>
       </div>
       {error && <p className="form-error" role="alert">{error}</p>}
       <button className="button button-primary form-submit" type="submit"><Icon name="whatsapp" size={19} /> Send inquiry on WhatsApp <Icon name="arrow" size={17} /></button>
-      <p className="form-privacy">Your inquiry will open in WhatsApp so you can review and send it directly to our team.</p>
+      <p className="form-privacy">Your inquiry opens in WhatsApp. Review the message and send it when you are ready.</p>
     </form>
   );
 }

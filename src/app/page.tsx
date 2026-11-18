@@ -79,7 +79,7 @@ export default function HomePage() {
           <div className="industry-grid">
             {industries.map((item, index) => (
               <Link href="/industries" className="industry-card" key={item.title}>
-                <div className="industry-photo"><Image src={item.image} alt={item.title + " setting"} fill sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" unoptimized /></div>
+                <div className="industry-photo"><Image src={item.image} alt={item.title + " setting"} fill sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" /></div>
                 <div className="industry-overlay" />
                 <div className="industry-card-content"><span className="industry-count">0{index + 1}</span><span className="industry-icon"><Icon name={item.icon} size={20} /></span><h3>{item.title}</h3><p>{item.text}</p><span className="industry-more">Explore solutions <Icon name="arrow" size={15} /></span></div>
               </Link>

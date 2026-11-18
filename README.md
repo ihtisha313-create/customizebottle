@@ -1,67 +1,66 @@
-# CustomizeBottle — Phase 1 + Phase 2
+# CustomizeBottle — Phase 1, 2 and 3
 
 Premium B2B website for customized drinking-water bottle supply.
 
-## Confirmed details
+## Confirmed business details
 
 - Brand: CustomizeBottle
-- Domain: https://customisebottle.com
+- Intended domain: https://customisebottle.com (not connected yet)
+- Temporary Vercel address: https://customizebottle.vercel.app
 - WhatsApp: +92 346 888 9433
 - Starting product: 500 ml customized bottled water
 - Minimum order: 500 bottles
 - Supply model: filled, capped, sealed and custom-labelled bottles
 - Initial service area: Peshawar, Pakistan
-- Language and style: English, premium corporate
+- Language: English
+- Design direction: premium corporate
 
 Factory details and an email address are intentionally excluded.
 
-## Pages
+## Pages and resources
 
 - / — Home
 - /bottles — Our Bottles
 - /industries — Industries
-- /how-it-works — How It Works
+- /how-it-works — How It Works and FAQs
 - /portfolio — Filterable illustrative design concepts (not claimed customer projects)
 - /about — About Us
 - /contact — Contact and quotation form
 - /privacy-policy — Privacy Policy
 - /terms — Terms & Conditions
+- /robots.txt and /sitemap.xml — search engine discovery
+- /opengraph-image — branded social sharing image
+- /manifest.webmanifest — site manifest
 
-## Phase 2 additions
+## Quote form
 
-- Step-by-step ordering process and FAQ.
-- Filterable portfolio concept gallery.
-- About page with truthful business positioning.
-- Privacy Policy and Terms & Conditions.
-- Expanded navigation and footer.
-- Updated sitemap, page metadata and Organization structured data.
+The form validates the 500-bottle minimum and opens a pre-filled WhatsApp inquiry for the customer to review and send. No database, customer account or online payment is required.
 
-The quotation form validates the 500-bottle minimum and opens a pre-filled WhatsApp message. No database or customer account is required.
-
-## Local development
+## Local development and build
 
 Requirements: Node.js 20.9 or later and npm.
 
-```bash
-npm install
-npm run dev
-```
+    npm install
+    npm run dev
+    npm run build
+    npm run start
 
-Open http://localhost:3000.
+## Deployment
 
-## Production build
+The GitHub repository is linked to the Vercel project named customisebottle. Pushes to main trigger a production deployment. The Vercel project is configured for Next.js and Node 22. Preview deployments remain protected; production is configured to be publicly accessible.
 
-```bash
-npm run build
-npm run start
-```
+The intended custom domain is customisebottle.com. It has deliberately not been connected yet. Add it only after launch review and once you control its DNS settings.
 
-The GitHub repository is linked to a Vercel project. Pushes to the configured production branch can trigger automatic production deployments. Check Vercel deployment status and build logs after each production push.
+## Performance and security
 
-The domain in metadata and sitemap is https://customisebottle.com. Add this domain to Vercel and follow the DNS instructions from Vercel and your registrar before launch.
+- Next Image optimization is enabled for Unsplash photography.
+- AVIF and WebP output formats are enabled.
+- Security response headers are configured in Next.js.
+- The site includes a skip-to-content link and a custom not-found page.
+- A custom Open Graph image is generated for social previews.
 
-## Images and launch compliance
+## Images and compliance
 
-Unsplash image URLs are used for natural photography. Portfolio items are concept illustrations, not completed customer projects or endorsements. Review image usage terms and replace with locally hosted approved assets if preferred.
+Unsplash image URLs are used for natural photography. Portfolio items are illustrative concepts, not completed customer projects or endorsements. Review image terms and locally host approved assets if preferred.
 
-Before accepting orders, verify applicable bottled-water product, manufacturer and food-business licensing and quality requirements. The site makes no unverified certification or laboratory claims.
+Before accepting orders, verify the applicable bottled-water product, manufacturer and food-business licensing and quality requirements. The site makes no unverified certification or laboratory claims.

@@ -17,7 +17,7 @@ export default function PortfolioGrid() {
  return <>
   <div className="portfolio-filters" role="group" aria-label="Filter concept examples">{filters.map(filter=><button className={active===filter?"portfolio-filter is-active":"portfolio-filter"} key={filter} type="button" aria-pressed={active===filter} onClick={()=>setActive(filter)}>{filter}</button>)}</div>
   <div className="portfolio-grid" aria-live="polite">{visible.map((item,index)=><article className="portfolio-card" key={item.title}>
-   <div className="portfolio-image"><Image src={item.image} alt={item.title+" visual inspiration"} fill sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw" unoptimized/><span className="portfolio-index">0{index+1}</span><span className="portfolio-concept">CONCEPT EXAMPLE</span></div>
+   <div className="portfolio-image"><Image src={item.image} alt={item.title+" visual inspiration"} fill sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw"/><span className="portfolio-index">0{index+1}</span><span className="portfolio-concept">CONCEPT EXAMPLE</span></div>
    <div className="portfolio-card-copy"><span className="portfolio-label">{item.label}</span><h2>{item.title}</h2><p>{item.description}</p></div>
   </article>)}</div>
  </>;
