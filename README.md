@@ -1,29 +1,42 @@
-# CustomizeBottle — Phase 1
+# CustomizeBottle — Phase 1 + Phase 2
 
 Premium B2B website for customized drinking-water bottle supply.
 
-## Confirmed project details
+## Confirmed details
 
 - Brand: CustomizeBottle
-- Production domain: https://customisebottle.com
-- Contact / quotation WhatsApp: +92 346 888 9433
-- Product featured in Phase 1: 500 ml customized bottled water
+- Domain: https://customisebottle.com
+- WhatsApp: +92 346 888 9433
+- Starting product: 500 ml customized bottled water
 - Minimum order: 500 bottles
 - Supply model: filled, capped, sealed and custom-labelled bottles
-- Initial service location: Peshawar, Pakistan
-- Language: English
-- Design direction: premium corporate
+- Initial service area: Peshawar, Pakistan
+- Language and style: English, premium corporate
 
-Factory details and an email address are intentionally excluded from the website.
+Factory details and an email address are intentionally excluded.
 
-## Phase 1 pages
+## Pages
 
 - / — Home
 - /bottles — Our Bottles
 - /industries — Industries
+- /how-it-works — How It Works
+- /portfolio — Filterable illustrative design concepts (not claimed customer projects)
+- /about — About Us
 - /contact — Contact and quotation form
+- /privacy-policy — Privacy Policy
+- /terms — Terms & Conditions
 
-The quotation form validates the 500-bottle minimum and opens a pre-filled WhatsApp message. No database or customer account is required for this phase.
+## Phase 2 additions
+
+- Step-by-step ordering process and FAQ.
+- Filterable portfolio concept gallery.
+- About page with truthful business positioning.
+- Privacy Policy and Terms & Conditions.
+- Expanded navigation and footer.
+- Updated sitemap, page metadata and Organization structured data.
+
+The quotation form validates the 500-bottle minimum and opens a pre-filled WhatsApp message. No database or customer account is required.
 
 ## Local development
 
@@ -43,19 +56,12 @@ npm run build
 npm run start
 ```
 
-## GitHub and Vercel
+The GitHub repository is linked to a Vercel project. Pushes to the configured production branch can trigger automatic production deployments. Check Vercel deployment status and build logs after each production push.
 
-1. Import this repository into Vercel.
-2. Vercel should detect Next.js automatically; use the project root as the root directory.
-3. Add customisebottle.com to the Vercel project's Domains settings and follow the DNS instructions shown by Vercel and your domain registrar.
-4. Confirm the production deployment and test all WhatsApp links and inquiry form fields.
+The domain in metadata and sitemap is https://customisebottle.com. Add this domain to Vercel and follow the DNS instructions from Vercel and your registrar before launch.
 
-The domain is configured in the site metadata as https://customisebottle.com. Connect the domain only after confirming you control its registration and can edit its DNS records.
+## Images and launch compliance
 
-## Images
+Unsplash image URLs are used for natural photography. Portfolio items are concept illustrations, not completed customer projects or endorsements. Review image usage terms and replace with locally hosted approved assets if preferred.
 
-The hero uses a clear-bottle product photo hosted on Unsplash. Hospitality, restaurant, healthcare and event imagery also uses Unsplash image URLs. Review the photo licensing terms and consider locally hosting approved images before launch.
-
-## Important launch note
-
-Before accepting orders, verify the applicable bottled-water product, manufacturer and food-business licensing / quality requirements. The website does not make claims about certificates, laboratory test results, regulatory approvals or factory identity.
+Before accepting orders, verify applicable bottled-water product, manufacturer and food-business licensing and quality requirements. The site makes no unverified certification or laboratory claims.
