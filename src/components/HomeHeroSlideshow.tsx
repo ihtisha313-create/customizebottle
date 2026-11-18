@@ -1,62 +1,20 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-
-const slides = [
-  {
-    src: "https://images.pexels.com/photos/11860560/pexels-photo-11860560.jpeg",
-    alt: "Two clear unbranded water bottles photographed together against a blue studio background"
-  },
-  {
-    src: "https://images.pexels.com/photos/11860563/pexels-photo-11860563.jpeg",
-    alt: "Clear unbranded plastic water bottle with a blue cap on a clean white studio backdrop"
-  },
-  {
-    src: "https://images.pexels.com/photos/11860559/pexels-photo-11860559.jpeg",
-    alt: "Clear unbranded water bottle photographed against a minimal blue studio background"
-  }
-];
 
 export default function HomeHeroSlideshow() {
-  const [active, setActive] = useState(0);
-  const [reducedMotion, setReducedMotion] = useState(false);
-
-  useEffect(() => {
-    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const update = () => setReducedMotion(media.matches);
-    update();
-    media.addEventListener("change", update);
-    return () => media.removeEventListener("change", update);
-  }, []);
-
-  useEffect(() => {
-    if (reducedMotion) return;
-    const timer = window.setInterval(() => {
-      setActive((current) => (current + 1) % slides.length);
-    }, 2000);
-    return () => window.clearInterval(timer);
-  }, [reducedMotion]);
-
   return (
     <section className="home-hero" aria-label="CustomizeBottle introduction">
       <div className="home-hero-photos" aria-hidden="true">
-        {slides.map((slide, index) => (
-          <div
-            className={"home-hero-photo" + (index === active ? " is-active" : "")}
-            key={slide.src}
-          >
-            <Image
-              src={slide.src}
-              alt=""
-              fill
-              sizes="100vw"
-              quality={88}
-              priority={index === 0}
-            />
-          </div>
-        ))}
+        <div className="home-hero-photo is-active">
+          <Image
+            src="/images/premium-water-bottle-splash.avif"
+            alt=""
+            fill
+            sizes="100vw"
+            quality={90}
+            priority
+          />
+        </div>
       </div>
       <div className="home-hero-overlay" aria-hidden="true" />
       <div className="home-hero-content">
