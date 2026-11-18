@@ -7,12 +7,12 @@ export default function HomeHeroSlideshow() {
       <div className="home-hero-photos" aria-hidden="true">
         <div className="home-hero-photo is-active">
           <Image
-            src="/images/premium-water-bottle-splash.avif"
+            src="/images/premium-water-bottle-splash.webp"
             alt=""
             fill
             sizes="100vw"
-            quality={90}
             priority
+            unoptimized
           />
         </div>
       </div>
