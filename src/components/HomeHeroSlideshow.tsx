@@ -6,16 +6,16 @@ import { useEffect, useState } from "react";
 
 const slides = [
   {
-    src: "https://download.pakutaso.com/shared/img/thumb/petIMGL5660.jpg",
-    alt: "Two clear, unbranded 500 ml bottled-water bottles photographed in a bright studio"
+    src: "https://images.pexels.com/photos/11860560/pexels-photo-11860560.jpeg",
+    alt: "Two clear unbranded water bottles photographed together against a blue studio background"
   },
   {
     src: "https://images.pexels.com/photos/11860563/pexels-photo-11860563.jpeg",
-    alt: "Clear unbranded plastic drinking-water bottle with a blue cap on a white studio backdrop"
+    alt: "Clear unbranded plastic water bottle with a blue cap on a clean white studio backdrop"
   },
   {
     src: "https://images.pexels.com/photos/11860559/pexels-photo-11860559.jpeg",
-    alt: "Clear unbranded water bottle photographed against a clean blue studio background"
+    alt: "Clear unbranded water bottle photographed against a minimal blue studio background"
   }
 ];
 

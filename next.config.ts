@@ -14,7 +14,6 @@ const nextConfig: NextConfig = {
   compress: true,
   images: {
     remotePatterns: [
-      { protocol: "https", hostname: "download.pakutaso.com", pathname: "/shared/img/thumb/**" },
       { protocol: "https", hostname: "images.pexels.com", pathname: "/photos/**" },
     ],
     formats: ["image/avif", "image/webp"],
