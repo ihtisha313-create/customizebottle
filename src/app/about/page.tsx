@@ -1,23 +1,91 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@/components/Icons";
+import WaterBottleVisual from "@/components/WaterBottleVisual";
+import WaterHero from "@/components/WaterHero";
 import { siteConfig, whatsappUrl } from "@/lib/site";
-export const metadata:Metadata={title:"About CustomizeBottle | Custom Bottle Branding in Pakistan",description:"Learn about CustomizeBottle, a Peshawar-based service helping businesses create customized drinking-water bottles.",alternates:{canonical:"/about"}};
-const values=[
- {icon:"palette" as const,title:"Brand-led design",text:"Bottle labels are planned around each customer's logo, colours and approved business details."},
- {icon:"message" as const,title:"Clear communication",text:"Requirements, artwork, quotation and order details are discussed before an order is confirmed."},
- {icon:"shield" as const,title:"Responsible presentation",text:"We aim to present product information clearly and avoid claims that have not been verified."},
+
+export const metadata: Metadata = {
+  title: "About CustomizeBottle | Custom Bottle Branding in Pakistan",
+  description: "Learn about CustomizeBottle, a Peshawar-based service helping businesses create customized drinking-water bottles.",
+  alternates: { canonical: "/about" },
+};
+
+const values = [
+  { icon: "palette" as const, title: "Brand-led design", text: "Bottle labels are planned around each customer's logo, colours and approved business details." },
+  { icon: "message" as const, title: "Clear communication", text: "Requirements, artwork, quotation and order details are discussed before an order is confirmed." },
+  { icon: "shield" as const, title: "Responsible presentation", text: "We aim to present product information clearly and avoid claims that have not been verified." },
 ];
-export default function AboutPage(){return <>
- <section className="page-hero"><div className="page-hero-bg"><Image src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=2000&q=88" alt="Clear bottled water in a natural setting" fill priority sizes="100vw"/></div><div className="page-hero-shade"/><div className="container page-hero-content"><span className="eyebrow eyebrow-light">ABOUT CUSTOMIZEBOTTLE</span><h1>We help your brand<br/><em>show up in the details.</em></h1><p>Customized drinking-water bottles for businesses that care about the experience they create.</p></div></section>
- <section className="section"><div className="container about-intro"><div className="about-copy"><span className="eyebrow">WHO WE ARE</span><h2>A practical service with <em>your business in mind.</em></h2>
-  <p>CustomizeBottle is a Peshawar-based business being developed to help hotels, restaurants, hospitals, wedding halls, event organizers and other businesses order drinking-water bottles with labels shaped around their own identity.</p>
-  <p>Customers can discuss their logo, brand colours, business information and order requirements with us. We coordinate the design and complete bottled-water order around the details agreed in the quotation.</p>
-  <p>Our starting offer is a customized 500 ml bottle, with a minimum order of {siteConfig.minimumOrder} bottles.</p>
-  <div className="about-actions"><Link className="button button-primary" href="/contact">Discuss your order <Icon name="arrow" size={17}/></Link><a className="text-link" href={whatsappUrl("Hello CustomizeBottle, I would like to learn more about your customized bottled-water service.")} target="_blank" rel="noreferrer">Chat on WhatsApp <Icon name="whatsapp" size={17}/></a></div>
- </div><div className="about-image"><Image src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=1200&q=88" alt="Fresh drinking water in a clear glass" fill sizes="(max-width: 800px) 100vw, 45vw"/><div className="about-image-caption"><strong>CustomizeBottle</strong><span>{siteConfig.location}</span></div></div></div></section>
- <section className="section soft-section"><div className="container"><div className="section-heading centered"><span className="eyebrow">WHAT GUIDES US</span><h2>Good business starts with <em>clear expectations.</em></h2><p>We want customers to know what they are ordering, what has been approved and what will happen next.</p></div><div className="about-values">{values.map((item,i)=><article className="about-value-card" key={item.title}><span className="about-value-number">0{i+1}</span><span className="detail-icon"><Icon name={item.icon} size={23}/></span><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></div></section>
- <section className="section"><div className="container about-bottom"><div><span className="eyebrow">STARTING IN PESHAWAR</span><h2>Built to serve local businesses, with room to grow.</h2><p>Our initial focus is to understand the needs of businesses in Peshawar and build dependable customer relationships. Delivery availability outside the area is confirmed individually with each quotation.</p></div><div className="about-stat"><strong>500</strong><span>minimum bottles per order</span><small>Current starting order quantity</small></div></div></section>
- <section className="closing-cta"><div className="container closing-cta-inner"><div><span className="eyebrow">LET'S TALK</span><h2>Tell us what your <em>business needs.</em></h2><p>Share your idea and we'll discuss the available next steps.</p></div><a className="button button-primary button-large" href={whatsappUrl("Hello CustomizeBottle, I would like to discuss a customized bottled-water order.")} target="_blank" rel="noreferrer"><Icon name="whatsapp" size={19}/> Contact CustomizeBottle</a></div></section>
- </>}
+
+export default function AboutPage() {
+  return (
+    <>
+      <WaterHero
+        eyebrow="ABOUT CUSTOMIZEBOTTLE"
+        title={<>We help your brand<br /><em>show up in the details.</em></>}
+        description="Customized drinking-water bottles for businesses that care about the experience they create."
+      />
+      <section className="section">
+        <div className="container about-intro">
+          <div className="about-copy">
+            <span className="eyebrow">WHO WE ARE</span>
+            <h2>A practical service with <em>your business in mind.</em></h2>
+            <p>CustomizeBottle is a Peshawar-based business being developed to help hotels, restaurants, hospitals, wedding halls, event organizers and other businesses order drinking-water bottles with labels shaped around their own identity.</p>
+            <p>Customers can discuss their logo, brand colours, business information and order requirements with us. We coordinate the design and complete bottled-water order around the details agreed in the quotation.</p>
+            <p>Our starting offer is a customized 500 ml bottle, with a minimum order of {siteConfig.minimumOrder} bottles.</p>
+            <div className="about-actions">
+              <Link className="button button-primary" href="/contact">Discuss your order <Icon name="arrow" size={17}/></Link>
+              <a className="text-link" href={whatsappUrl("Hello CustomizeBottle, I would like to learn more about your customized bottled-water service.")} target="_blank" rel="noreferrer">Chat on WhatsApp <Icon name="whatsapp" size={17}/></a>
+            </div>
+          </div>
+          <div className="about-water-stage">
+            <WaterBottleVisual label="CUSTOMIZEBOTTLE" caption="A LITTLE DETAIL. YOUR WHOLE IDENTITY." />
+          </div>
+        </div>
+      </section>
+      <section className="section soft-section">
+        <div className="container">
+          <div className="section-heading centered">
+            <span className="eyebrow">WHAT GUIDES US</span>
+            <h2>Good business starts with <em>clear expectations.</em></h2>
+            <p>We want customers to know what they are ordering, what has been approved and what will happen next.</p>
+          </div>
+          <div className="about-values">
+            {values.map((item, i) => (
+              <article className="about-value-card" key={item.title}>
+                <span className="about-value-number">0{i + 1}</span>
+                <span className="detail-icon"><Icon name={item.icon} size={23}/></span>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="section">
+        <div className="container about-bottom">
+          <div>
+            <span className="eyebrow">STARTING IN PESHAWAR</span>
+            <h2>Built to serve local businesses, with room to grow.</h2>
+            <p>Our initial focus is to understand the needs of businesses in Peshawar and build dependable customer relationships. Delivery availability outside the area is confirmed individually with each quotation.</p>
+          </div>
+          <div className="about-stat">
+            <strong>500</strong>
+            <span>minimum bottles per order</span>
+            <small>Current starting order quantity</small>
+          </div>
+        </div>
+      </section>
+      <section className="closing-cta">
+        <div className="container closing-cta-inner">
+          <div>
+            <span className="eyebrow">LET'S TALK</span>
+            <h2>Tell us what your <em>business needs.</em></h2>
+            <p>Share your idea and we'll discuss the available next steps.</p>
+          </div>
+          <a className="button button-primary button-large" href={whatsappUrl("Hello CustomizeBottle, I would like to discuss a customized bottled-water order.")} target="_blank" rel="noreferrer"><Icon name="whatsapp" size={19}/> Contact CustomizeBottle</a>
+        </div>
+      </section>
+    </>
+  );
+}

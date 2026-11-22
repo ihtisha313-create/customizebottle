@@ -3,11 +3,13 @@ import { Inter, Manrope } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import WaterAtmosphere from "@/components/WaterAtmosphere";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 import "./phase2.css";
 import "./phase3.css";
 import "./homepage.css";
+import "./water-theme.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope", display: "swap" });
@@ -37,7 +39,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true }
 };
 
-export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#10283B" };
+export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#07384B" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const organization = {
@@ -54,6 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={inter.variable + " " + manrope.variable}>
       <body>
+        <WaterAtmosphere />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }} />
         <a className="skip-to-content" href="#main-content">Skip to content</a>
         <Header />

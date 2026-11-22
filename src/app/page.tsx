@@ -1,17 +1,17 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@/components/Icons";
 import HomeMotion from "@/components/HomeMotion";
 import HomeHeroSlideshow from "@/components/HomeHeroSlideshow";
+import WaterBottleVisual from "@/components/WaterBottleVisual";
 import { siteConfig, whatsappUrl } from "@/lib/site";
 
 const industries = [
-  { title: "Hotels & Hospitality", icon: "hotel" as const, text: "A considered welcome for guest rooms, suites and hospitality spaces.", image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=2400&q=90", position: "center" },
-  { title: "Restaurants & Cafés", icon: "restaurant" as const, text: "Bring your identity to the table with custom-labelled bottles.", image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2400&q=90", position: "center" },
-  { title: "Hospitals & Clinics", icon: "hospital" as const, text: "A clear, professional presentation for visitors and teams.", image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=2400&q=90", position: "center" },
-  { title: "Weddings & Events", icon: "calendar" as const, text: "A personal finishing touch for celebrations and special occasions.", image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=2400&q=90", position: "center" },
-  { title: "Corporate Gatherings", icon: "building" as const, text: "Custom-branded bottles for meetings, conferences and company events.", image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2400&q=90", position: "center" },
-  { title: "Catering & Venues", icon: "utensils" as const, text: "A coordinated presentation for catering teams and venue service.", image: "https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=2400&q=90", position: "center" },
+  { title: "Hotels & Hospitality", icon: "hotel" as const, text: "A considered welcome for guest rooms, suites and hospitality spaces." },
+  { title: "Restaurants & Cafés", icon: "restaurant" as const, text: "Bring your identity to the table with custom-labelled bottles." },
+  { title: "Hospitals & Clinics", icon: "hospital" as const, text: "A clear, professional presentation for visitors and teams." },
+  { title: "Weddings & Events", icon: "calendar" as const, text: "A personal finishing touch for celebrations and special occasions." },
+  { title: "Corporate Gatherings", icon: "building" as const, text: "Custom-branded bottles for meetings, conferences and company events." },
+  { title: "Catering & Venues", icon: "utensils" as const, text: "A coordinated presentation for catering teams and venue service." },
 ];
 
 const steps = [
@@ -29,19 +29,13 @@ const benefits = [
   { number: "04", icon: "truck" as const, title: "Straightforward coordination", text: "Discuss quantity, delivery city and timing before the order is confirmed." },
 ];
 
-const photography = {
-  bottle: "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=2400&q=90",
-  hotel: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1800&q=88",
-  dining: "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=1800&q=88",
-};
-
 export default function HomePage() {
   return (
     <>
       <HomeMotion />
       <HomeHeroSlideshow />
 
-      <section className="home-quick-facts">
+      <section className="home-quick-facts water-glass-strip">
         <div className="container home-quick-facts-grid">
           <div className="home-fact" data-reveal>
             <span className="home-fact-icon"><Icon name="droplet" size={20} /></span>
@@ -86,20 +80,9 @@ export default function HomePage() {
             </ul>
             <Link className="home-text-link" href="/bottles">Discover the 500 ml bottle option <Icon name="arrow" size={16} /></Link>
           </div>
-          <div className="home-photo-mosaic" data-reveal>
-            <figure className="home-photo-main">
-              <Image src={photography.bottle} alt="Clear drinking-water bottle photographed in soft natural light" fill sizes="(max-width: 820px) 100vw, 46vw" quality={88} />
-              <figcaption><span>THE BOTTLE</span><strong>A clean canvas for your identity.</strong></figcaption>
-            </figure>
-            <figure className="home-photo-tile home-photo-hotel">
-              <Image src={photography.hotel} alt="A calm, refined hospitality interior" fill sizes="(max-width: 820px) 48vw, 22vw" quality={86} />
-              <figcaption><span>THE WELCOME</span></figcaption>
-            </figure>
-            <figure className="home-photo-tile home-photo-dining">
-              <Image src={photography.dining} alt="Water glass and thoughtful table presentation" fill sizes="(max-width: 820px) 48vw, 22vw" quality={86} />
-              <figcaption><span>THE TABLE</span></figcaption>
-            </figure>
-            <span className="home-photo-note">STOCK PHOTOGRAPHY · VISUAL INSPIRATION</span>
+          <div className="home-product-water" data-reveal>
+            <WaterBottleVisual label="YOUR BRAND" caption="THE 500 ML SIGNATURE" />
+            <div className="home-product-water-note"><span>01 / 03</span><strong>Water, shaped around your identity.</strong><small>Illustrative design direction</small></div>
           </div>
         </div>
       </section>
@@ -116,10 +99,10 @@ export default function HomePage() {
           <div className="home-industry-grid">
             {industries.map((item, index) => (
               <Link href="/industries" className="home-industry-card" key={item.title} data-reveal>
-                <div className="home-industry-image">
-                  <Image src={item.image} alt={item.title + " setting"} fill sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" quality={88} />
+                <div className={`home-industry-water water-tone-${index + 1}`} aria-hidden="true">
+                  <span className="home-industry-water-ring" />
+                  <span className="home-industry-water-glint" />
                 </div>
-                <div className="home-industry-shade" />
                 <span className="home-industry-index">0{index + 1}</span>
                 <div className="home-industry-copy">
                   <span className="home-industry-icon"><Icon name={item.icon} size={20} /></span>
@@ -138,7 +121,7 @@ export default function HomePage() {
       </section>
 
       <section className="home-process-section">
-        <div className="home-process-backdrop" />
+        <div className="home-process-backdrop" aria-hidden="true"><span /><span /><span /></div>
         <div className="container">
           <div className="home-process-heading" data-reveal>
             <span className="home-section-kicker home-section-kicker-light">A CLEAR, FIVE-STEP JOURNEY</span>

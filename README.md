@@ -1,4 +1,4 @@
-# CustomizeBottle — Phase 1, 2 and 3
+# CustomizeBottle — Water Motion Website
 
 Premium B2B website for customized drinking-water bottle supply.
 
@@ -13,7 +13,7 @@ Premium B2B website for customized drinking-water bottle supply.
 - Supply model: filled, capped, sealed and custom-labelled bottles
 - Initial service area: Peshawar, Pakistan
 - Language: English
-- Design direction: premium corporate
+- Design direction: premium water-motion / clean corporate
 
 Factory details and an email address are intentionally excluded.
 
@@ -23,7 +23,7 @@ Factory details and an email address are intentionally excluded.
 - /bottles — Our Bottles
 - /industries — Industries
 - /how-it-works — How It Works and FAQs
-- /portfolio — Filterable illustrative design concepts (not claimed customer projects)
+- /portfolio — Filterable illustrative design concepts
 - /about — About Us
 - /contact — Contact and quotation form
 - /privacy-policy — Privacy Policy
@@ -32,16 +32,22 @@ Factory details and an email address are intentionally excluded.
 - /opengraph-image — branded social sharing image
 - /manifest.webmanifest — site manifest
 
+## Visual system and performance
+
+The website uses locally rendered CSS and inline SVG water-motion effects: soft water caustics, slow surface waves, ripple rings, light sweeps and a CSS-built bottle illustration. It does not load background video files or stock-photo backgrounds. The effects are decorative, run without external media requests, scale to smaller screens and respect the user's reduced-motion preference.
+
 ## Quote form
 
 The form validates the 500-bottle minimum and opens a pre-filled WhatsApp inquiry for the customer to review and send. No database, customer account or online payment is required.
 
 ## Local development and build
 
-Requirements: Node.js 20.9 or later and npm.
+Use Node.js 22.x.
 
     npm install
     npm run dev
+    npm run typecheck
+    npm run lint
     npm run build
     npm run start
 
@@ -51,16 +57,6 @@ The GitHub repository is linked to the Vercel project named customisebottle. Pus
 
 The live site currently uses the Vercel address for canonical URLs and the sitemap. The planned custom domain, customisebottle.com, has deliberately not been connected. When it is added to Vercel and its DNS is configured, update siteConfig.domain to the custom domain and redeploy so canonical URLs, metadata and sitemap move together.
 
-## Performance and security
+## Compliance
 
-- Next Image optimization is enabled for Unsplash photography.
-- AVIF and WebP output formats are enabled.
-- Security response headers are configured in Next.js.
-- The site includes a skip-to-content link and a custom not-found page.
-- A custom Open Graph image is generated for social previews.
-
-## Images and compliance
-
-Unsplash image URLs are used for natural photography. Portfolio items are illustrative concepts, not completed customer projects or endorsements. Review image terms and locally host approved assets if preferred.
-
-Before accepting orders, verify the applicable bottled-water product, manufacturer and food-business licensing and quality requirements. The site makes no unverified certification or laboratory claims.
+The website intentionally avoids unverified manufacturer, certification or laboratory claims. Before accepting orders, verify applicable bottled-water product, manufacturer, food-business licensing and quality requirements.
