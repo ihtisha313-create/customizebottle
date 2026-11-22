@@ -112,7 +112,6 @@ const translations: Record<string, string> = {
   "From first idea": "پہلے خیال سے",
   "to finished bottles.": "تیار بوتلوں تک۔",
   "Good communication matters. We keep the details clear so you can review the proposed design and quotation before confirming an order.": "واضح رابطہ اہم ہے۔ ہم تمام تفصیلات واضح رکھتے ہیں تاکہ آرڈر کی منظوری سے پہلے آپ ڈیزائن اور قیمت کا جائزہ لے سکیں۔",
-  "Tell us what you need": "اپنی ضرورت بتائیں",
   "Share your business type, city and estimated quantity.": "اپنے کاروبار کی نوعیت، شہر اور متوقع تعداد بتائیں۔",
   "Create your label direction": "لیبل کا ڈیزائن تیار کریں",
   "Send your logo and brand details for a custom design concept.": "خصوصی ڈیزائن کے لیے اپنا لوگو اور برانڈ کی تفصیلات بھیجیں۔",
@@ -317,13 +316,11 @@ const translations: Record<string, string> = {
   "Guest rooms and suites": "مہمانوں کے کمرے اور سویٹس",
   "Hotel restaurants and lounges": "ہوٹل ریسٹورنٹس اور لاؤنجز",
   "Meetings and guest events": "میٹنگز اور مہمانوں کی تقریبات",
-  "Restaurants & Cafés": "ریسٹورنٹس اور کیفے",
   "Your identity, right at the table.": "آپ کی پہچان، ہر میز پر۔",
   "Bring your restaurant or café identity into the dining experience with customized bottles that complement your menu, interior and customer service.": "اپنے مینو، اندرونی سجاوٹ اور کسٹمر سروس کے مطابق خصوصی بوتلوں کے ذریعے ریسٹورنٹ یا کیفے کی شناخت کو کھانے کے تجربے کا حصہ بنائیں۔",
   "Restaurant tables": "ریسٹورنٹ کی میزیں",
   "Café service": "کیفے سروس",
   "Private dining and catering": "نجی تقریبات اور کیٹرنگ",
-  "Hospitals & Clinics": "ہسپتال اور کلینکس",
   "A consistent look across your facility.": "آپ کے ادارے میں یکساں انداز۔",
   "Create a coordinated bottled-water presentation for reception areas, visitor spaces, staff meetings and approved hospitality arrangements.": "استقبالیہ، مہمانوں کے مقامات، اسٹاف میٹنگز اور منظور شدہ مہمان نوازی کے انتظامات کے لیے ہم آہنگ بوتلوں کی پیشکش تیار کریں۔",
   "Visitor and reception areas": "مہمانوں اور استقبالیہ کے مقامات",
@@ -389,7 +386,6 @@ const translations: Record<string, string> = {
   "A versatile direction for catered functions and hosted events.": "کیٹرنگ اور تقریبات کے لیے ہمہ گیر ڈیزائن۔",
   "Filter concept examples": "ڈیزائن کے نمونے فلٹر کریں",
 
-  "Privacy Policy": "رازداری کی پالیسی",
   "CUSTOMIZEBOTTLE": "CUSTOMIZEBOTTLE",
   "Privacy": "رازداری",
   "Policy": "پالیسی",
@@ -438,11 +434,8 @@ const translations: Record<string, string> = {
   "This page seems to have": "لگتا ہے یہ صفحہ",
   "gone missing.": "دستیاب نہیں ہے۔",
   "The link may be outdated or the page may have moved. Head back to CustomizeBottle or contact our team for help.": "ممکن ہے لنک پرانا ہو یا صفحہ منتقل ہو گیا ہو۔ CustomizeBottle کے ہوم پیج پر واپس جائیں یا مدد کے لیے ہماری ٹیم سے رابطہ کریں۔",
-  "Back to home": "ہوم پیج پر واپس جائیں",
 
   "Page Not Found": "صفحہ نہیں ملا",
-  "Business type": "کاروبار کی نوعیت",
-  "Please complete your name, business name and delivery city.": "براہِ کرم اپنا نام، کاروبار کا نام اور ڈیلیوری شہر درج کریں۔"
 };
 
 function normalize(value: string) {
