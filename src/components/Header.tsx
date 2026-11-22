@@ -20,11 +20,11 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <Link className="brand" href="/" aria-label="CustomizeBottle home" onClick={() => setOpen(false)}>
+        <Link className="brand" href="/" aria-label="APNAAB home" onClick={() => setOpen(false)}>
           <span className="brand-mark"><Icon name="droplet" size={25}/></span>
           <span className="brand-copy">
-            <strong>Customize<span>Bottle</span></strong>
-            <small>CUSTOM-BRANDED BOTTLES &amp; SUPPLY</small>
+            <strong>APNAAB</strong>
+            <small>CUSTOM-BRANDED WATER</small>
           </span>
         </Link>
         <button className="mobile-menu-toggle" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen(!open)}>
@@ -33,7 +33,7 @@ export default function Header() {
         <nav className={"main-nav " + (open ? "is-open" : "")} aria-label="Main navigation">
           {links.map(link => <Link key={link.href} href={link.href} onClick={() => setOpen(false)}>{link.label}</Link>)}
           <LanguageSwitcher />
-          <a className="button button-primary nav-quote" href={whatsappUrl("Hello CustomizeBottle, I would like to request a quotation for customized bottled water.")} target="_blank" rel="noreferrer">
+          <a className="button button-primary nav-quote" href={whatsappUrl("Hello APNAAB, I would like to request a quotation for customized bottled water.")} target="_blank" rel="noreferrer">
             <Icon name="whatsapp" size={17}/> Request a Quote
           </a>
         </nav>

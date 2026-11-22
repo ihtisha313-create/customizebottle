@@ -7,7 +7,7 @@ import { siteConfig, whatsappUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Our Bottles | Custom-Branded 500 ml Drinking Water",
-  description: "Explore CustomizeBottle's 500 ml customized bottled-water option, custom label design and complete bottle supply. Minimum order 500 bottles.",
+  description: "Explore APNAAB's 500 ml customized bottled-water option, custom label design and complete bottle supply. Minimum order 500 bottles.",
   alternates: { canonical: "/bottles" },
 };
 
@@ -30,7 +30,7 @@ export default function BottlesPage() {
       <section className="section">
         <div className="container product-layout">
           <div className="product-image-wrap water-product-card">
-            <WaterBottleVisual label="YOUR BRAND" caption="CUSTOM-LABELLED · 500 ML" />
+            <WaterBottleVisual label="APNAAB" caption="CUSTOM-LABELLED · 500 ML" />
             <span className="product-image-tag">ILLUSTRATIVE PRODUCT VISUAL</span>
           </div>
           <div className="product-copy">
@@ -39,7 +39,7 @@ export default function BottlesPage() {
             <p>Whether you welcome hotel guests, serve restaurant customers or host a special event, a customized bottle gives your business another opportunity to make a consistent impression.</p>
             <div className="product-spec"><span>STANDARD SIZE</span><strong>500 ml</strong><small>Other sizes can be discussed as future options.</small></div>
             <div className="minimum-panel"><div><span>MINIMUM ORDER QUANTITY</span><strong>{siteConfig.minimumOrder} bottles</strong></div><Icon name="check" size={22}/></div>
-            <a className="button button-primary" href={whatsappUrl("Hello CustomizeBottle, please share a quotation for the 500 ml customized bottled-water option. I understand the minimum order is 500 bottles.")} target="_blank" rel="noreferrer"><Icon name="whatsapp" size={18}/> Request a bottle quotation</a>
+            <a className="button button-primary" href={whatsappUrl("Hello APNAAB, please share a quotation for the 500 ml customized bottled-water option. I understand the minimum order is 500 bottles.")} target="_blank" rel="noreferrer"><Icon name="whatsapp" size={18}/> Request a bottle quotation</a>
           </div>
         </div>
       </section>

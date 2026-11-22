@@ -6,8 +6,8 @@ import WaterHero from "@/components/WaterHero";
 import { siteConfig, whatsappUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About CustomizeBottle | Custom Bottle Branding in Pakistan",
-  description: "Learn about CustomizeBottle, a Peshawar-based service helping businesses create customized drinking-water bottles.",
+  title: "About APNAAB | Custom Bottle Branding in Pakistan",
+  description: "Learn about APNAAB, a Peshawar-based service helping businesses create customized drinking-water bottles.",
   alternates: { canonical: "/about" },
 };
 
@@ -21,7 +21,7 @@ export default function AboutPage() {
   return (
     <>
       <WaterHero
-        eyebrow="ABOUT CUSTOMIZEBOTTLE"
+        eyebrow="ABOUT APNAAB"
         title={<>We help your brand<br /><em>show up in the details.</em></>}
         description="Customized drinking-water bottles for businesses that care about the experience they create."
       />
@@ -30,16 +30,16 @@ export default function AboutPage() {
           <div className="about-copy">
             <span className="eyebrow">WHO WE ARE</span>
             <h2>A practical service with <em>your business in mind.</em></h2>
-            <p>CustomizeBottle is a Peshawar-based business being developed to help hotels, restaurants, hospitals, wedding halls, event organizers and other businesses order drinking-water bottles with labels shaped around their own identity.</p>
+            <p>APNAAB is a Peshawar-based business being developed to help hotels, restaurants, hospitals, wedding halls, event organizers and other businesses order drinking-water bottles with labels shaped around their own identity.</p>
             <p>Customers can discuss their logo, brand colours, business information and order requirements with us. We coordinate the design and complete bottled-water order around the details agreed in the quotation.</p>
             <p>Our starting offer is a customized 500 ml bottle, with a minimum order of {siteConfig.minimumOrder} bottles.</p>
             <div className="about-actions">
               <Link className="button button-primary" href="/contact">Discuss your order <Icon name="arrow" size={17}/></Link>
-              <a className="text-link" href={whatsappUrl("Hello CustomizeBottle, I would like to learn more about your customized bottled-water service.")} target="_blank" rel="noreferrer">Chat on WhatsApp <Icon name="whatsapp" size={17}/></a>
+              <a className="text-link" href={whatsappUrl("Hello APNAAB, I would like to learn more about your customized bottled-water service.")} target="_blank" rel="noreferrer">Chat on WhatsApp <Icon name="whatsapp" size={17}/></a>
             </div>
           </div>
           <div className="about-water-stage">
-            <WaterBottleVisual label="CUSTOMIZEBOTTLE" caption="A LITTLE DETAIL. YOUR WHOLE IDENTITY." />
+            <WaterBottleVisual label="APNAAB" caption="A LITTLE DETAIL. YOUR WHOLE IDENTITY." />
           </div>
         </div>
       </section>
@@ -83,7 +83,7 @@ export default function AboutPage() {
             <h2>Tell us what your <em>business needs.</em></h2>
             <p>Share your idea and we'll discuss the available next steps.</p>
           </div>
-          <a className="button button-primary button-large" href={whatsappUrl("Hello CustomizeBottle, I would like to discuss a customized bottled-water order.")} target="_blank" rel="noreferrer"><Icon name="whatsapp" size={19}/> Contact CustomizeBottle</a>
+          <a className="button button-primary button-large" href={whatsappUrl("Hello APNAAB, I would like to discuss a customized bottled-water order.")} target="_blank" rel="noreferrer"><Icon name="whatsapp" size={19}/> Contact APNAAB</a>
         </div>
       </section>
     </>

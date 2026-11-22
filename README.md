@@ -1,11 +1,11 @@
-# CustomizeBottle — Water Motion Website
+# APNAAB — Water Motion Website
 
 Premium B2B website for customized drinking-water bottle supply.
 
 ## Confirmed business details
 
-- Brand: CustomizeBottle
-- Current live address and canonical domain: https://customizebottle.vercel.app
+- Brand: APNAAB
+- Current live address and canonical domain: https://apnaab.com
 - Planned custom domain: https://customisebottle.com (not connected yet)
 - WhatsApp: +92 346 888 9433
 - Starting product: 500 ml customized bottled water

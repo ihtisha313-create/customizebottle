@@ -27,7 +27,7 @@ export default function QuoteForm() {
     }
     setError("");
     const message = [
-      "Hello CustomizeBottle, I would like to request a quotation.",
+      "Hello APNAAB, I would like to request a quotation.",
       "",
       "Name: " + name.trim(),
       "Business: " + business.trim(),

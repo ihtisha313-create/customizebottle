@@ -2,15 +2,25 @@
 import { useMemo, useState } from "react";
 import { Icon } from "@/components/Icons";
 
-type Item = { title: string; category: string; description: string; label: string; icon: "hotel" | "restaurant" | "hospital" | "calendar" | "building" | "utensils" };
+type Item = {
+  title: string;
+  category: string;
+  description: string;
+  label: string;
+  image: string;
+  alt: string;
+  icon: "hotel" | "restaurant" | "hospital" | "calendar" | "building" | "utensils";
+};
+
 const items: Item[] = [
-  { title: "Hotel welcome concept", category: "Hotels", description: "A calm label direction for guest rooms and hospitality spaces.", label: "HOTEL COLLECTION", icon: "hotel" },
-  { title: "Restaurant table concept", category: "Restaurants", description: "A clean presentation designed to complement a dining experience.", label: "DINING COLLECTION", icon: "restaurant" },
-  { title: "Clinic hospitality concept", category: "Healthcare", description: "A clear design direction for clinics and visitor areas.", label: "CARE COLLECTION", icon: "hospital" },
-  { title: "Wedding celebration concept", category: "Events", description: "A personal label direction for weddings and special occasions.", label: "CELEBRATION COLLECTION", icon: "calendar" },
-  { title: "Corporate meeting concept", category: "Corporate", description: "A professional visual direction for conferences and company gatherings.", label: "BUSINESS COLLECTION", icon: "building" },
-  { title: "Event service concept", category: "Events", description: "A versatile direction for catered functions and hosted events.", label: "EVENT COLLECTION", icon: "utensils" },
+  { title: "Hotel welcome concept", category: "Hotels", description: "A considered bottle presentation for guest rooms, suites and hospitality spaces.", label: "HOTEL COLLECTION", image: "https://images.unsplash.com/photo-1776876648949-63ccabf63b10?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=1400", alt: "Premium hotel guest room and bedside water service", icon: "hotel" },
+  { title: "Restaurant table concept", category: "Restaurants", description: "A clean, custom-labelled bottle presentation designed for the dining table.", label: "DINING COLLECTION", image: "https://images.unsplash.com/photo-1765099271664-614c541196ef?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=1400", alt: "Premium restaurant table prepared for guests", icon: "restaurant" },
+  { title: "Clinic hospitality concept", category: "Healthcare", description: "A calm, professional presentation for clinics, visitors and reception spaces.", label: "CARE COLLECTION", image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=1400", alt: "Bright modern hospital reception area", icon: "hospital" },
+  { title: "Wedding celebration concept", category: "Events", description: "A personal label direction for weddings and special occasions.", label: "CELEBRATION COLLECTION", image: "https://images.unsplash.com/photo-1763553113332-800519753e40?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=1400", alt: "Elegant event hall set for a formal celebration", icon: "calendar" },
+  { title: "Corporate meeting concept", category: "Corporate", description: "A refined visual direction for conferences and company gatherings.", label: "BUSINESS COLLECTION", image: "https://images.unsplash.com/photo-1777264935754-aa53096c2d68?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=1400", alt: "Contemporary boardroom with a long meeting table", icon: "building" },
+  { title: "Event service concept", category: "Events", description: "A versatile presentation for catering, hosted functions and event service.", label: "EVENT COLLECTION", image: "https://images.unsplash.com/photo-1773040835762-ace903c83f36?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=1400", alt: "Catering staff arranging a buffet", icon: "utensils" },
 ];
+
 const filters = ["All", "Hotels", "Restaurants", "Healthcare", "Events", "Corporate"];
 
 export default function PortfolioGrid() {
@@ -19,18 +29,19 @@ export default function PortfolioGrid() {
   return (
     <>
       <div className="portfolio-filters" role="group" aria-label="Filter concept examples">
-        {filters.map(filter => <button className={active === filter ? "portfolio-filter is-active" : "portfolio-filter"} key={filter} type="button" aria-pressed={active === filter} onClick={() => setActive(filter)}>{filter}</button>)}
+        {filters.map(filter => (
+          <button className={active === filter ? "portfolio-filter is-active" : "portfolio-filter"} key={filter} type="button" aria-pressed={active === filter} onClick={() => setActive(filter)}>{filter}</button>
+        ))}
       </div>
       <div className="portfolio-grid" aria-live="polite">
         {visible.map((item, index) => (
           <article className="portfolio-card" key={item.title}>
-            <div className={`portfolio-image water-tone-${index + 1}`}>
-              <span className="portfolio-water-ripple portfolio-water-ripple-one" />
-              <span className="portfolio-water-ripple portfolio-water-ripple-two" />
+            <div className="portfolio-image">
+              <img className="portfolio-photo" src={item.image} alt={item.alt} width="960" height="720" loading="lazy" decoding="async" />
               <span className="portfolio-index">0{index + 1}</span>
-              <span className="portfolio-concept">CONCEPT EXAMPLE</span>
-              <span className="portfolio-water-icon"><Icon name={item.icon} size={42}/></span>
-              <span className="portfolio-waterline">CUSTOMIZEBOTTLE · 500 ML</span>
+              <span className="portfolio-concept">CONCEPT DIRECTION</span>
+              <span className="portfolio-water-icon"><Icon name={item.icon} size={30}/></span>
+              <span className="portfolio-waterline">APNAAB · 500 ML</span>
             </div>
             <div className="portfolio-card-copy"><span className="portfolio-label">{item.label}</span><h2>{item.title}</h2><p>{item.description}</p></div>
           </article>

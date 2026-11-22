@@ -1,17 +1,16 @@
 import Link from "next/link";
 import { Icon } from "@/components/Icons";
-import HomeMotion from "@/components/HomeMotion";
 import HomeHeroSlideshow from "@/components/HomeHeroSlideshow";
 import WaterBottleVisual from "@/components/WaterBottleVisual";
 import { siteConfig, whatsappUrl } from "@/lib/site";
 
 const industries = [
-  { title: "Hotels & Hospitality", icon: "hotel" as const, text: "A considered welcome for guest rooms, suites and hospitality spaces." },
-  { title: "Restaurants & Cafés", icon: "restaurant" as const, text: "Bring your identity to the table with custom-labelled bottles." },
-  { title: "Hospitals & Clinics", icon: "hospital" as const, text: "A clear, professional presentation for visitors and teams." },
-  { title: "Weddings & Events", icon: "calendar" as const, text: "A personal finishing touch for celebrations and special occasions." },
-  { title: "Corporate Gatherings", icon: "building" as const, text: "Custom-branded bottles for meetings, conferences and company events." },
-  { title: "Catering & Venues", icon: "utensils" as const, text: "A coordinated presentation for catering teams and venue service." },
+  { title: "Hotels & Hospitality", icon: "hotel" as const, text: "A considered welcome for guest rooms, suites and hospitality spaces.", image: "https://images.unsplash.com/photo-1776876648949-63ccabf63b10?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=1400", imageAlt: "Premium hotel guest room with bottled water on a bedside table" },
+  { title: "Restaurants & Cafés", icon: "restaurant" as const, text: "Bring your identity to the table with custom-labelled bottles.", image: "https://images.unsplash.com/photo-1765099271664-614c541196ef?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=1400", imageAlt: "Elegant restaurant table setting and water service" },
+  { title: "Hospitals & Clinics", icon: "hospital" as const, text: "A clear, professional presentation for visitors and teams.", image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=1400", imageAlt: "Modern clinic reception and waiting area" },
+  { title: "Weddings & Events", icon: "calendar" as const, text: "A personal finishing touch for celebrations and special occasions.", image: "https://images.unsplash.com/photo-1763553113332-800519753e40?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=1400", imageAlt: "Elegant banquet hall prepared for a celebration" },
+  { title: "Corporate Gatherings", icon: "building" as const, text: "Custom-branded bottles for meetings, conferences and company events.", image: "https://images.unsplash.com/photo-1777264935754-aa53096c2d68?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=1400", imageAlt: "Premium corporate boardroom prepared for a meeting" },
+  { title: "Catering & Venues", icon: "utensils" as const, text: "A coordinated presentation for catering teams and venue service.", image: "https://images.unsplash.com/photo-1773040835762-ace903c83f36?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=1400", imageAlt: "Professional catering buffet service" },
 ];
 
 const steps = [
@@ -32,7 +31,6 @@ const benefits = [
 export default function HomePage() {
   return (
     <>
-      <HomeMotion />
       <HomeHeroSlideshow />
 
       <section className="home-intent-section" aria-labelledby="home-intent-title">
@@ -111,7 +109,7 @@ export default function HomePage() {
             <Link className="home-text-link" href="/bottles">Discover the 500 ml bottle option <Icon name="arrow" size={16} /></Link>
           </div>
           <div className="home-product-water" data-reveal>
-            <WaterBottleVisual label="YOUR BRAND" caption="THE 500 ML SIGNATURE" />
+            <WaterBottleVisual label="APNAAB" caption="THE 500 ML SIGNATURE" />
             <div className="home-product-water-note"><span>01 / 03</span><strong>Water, shaped around your identity.</strong><small>Illustrative design direction</small></div>
           </div>
         </div>
@@ -129,10 +127,10 @@ export default function HomePage() {
           <div className="home-industry-grid">
             {industries.map((item, index) => (
               <Link href="/industries" className="home-industry-card" key={item.title} data-reveal>
-                <div className={`home-industry-water water-tone-${index + 1}`} aria-hidden="true">
-                  <span className="home-industry-water-ring" />
-                  <span className="home-industry-water-glint" />
+                <div className="home-industry-image" aria-hidden="true">
+                  <img src={item.image} alt={item.imageAlt} width="960" height="640" loading="lazy" decoding="async" />
                 </div>
+                <div className="home-industry-shade" aria-hidden="true" />
                 <span className="home-industry-index">0{index + 1}</span>
                 <div className="home-industry-copy">
                   <span className="home-industry-icon"><Icon name={item.icon} size={20} /></span>
@@ -176,7 +174,7 @@ export default function HomePage() {
         <div className="container">
           <div className="home-section-heading home-difference-heading" data-reveal>
             <div>
-              <span className="home-section-kicker">THE CUSTOMIZEBOTTLE APPROACH</span>
+              <span className="home-section-kicker">THE APNAAB APPROACH</span>
               <h2>Well presented.<br /><em>Clearly agreed.</em></h2>
             </div>
             <p>A custom bottle order should suit your identity, your quantity and the occasion. We discuss the details with you before anything is confirmed.</p>
@@ -208,7 +206,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="home-cta-actions">
-              <a className="button button-primary home-cta-button" href={whatsappUrl("Hello CustomizeBottle, I would like to discuss a custom-branded bottled-water order. Please guide me through the quotation process.")} target="_blank" rel="noreferrer">
+              <a className="button button-primary home-cta-button" href={whatsappUrl("Hello APNAAB, I would like to discuss a custom-branded bottled-water order. Please guide me through the quotation process.")} target="_blank" rel="noreferrer">
                 <Icon name="whatsapp" size={19} /> Start a WhatsApp enquiry <Icon name="arrow" size={16} />
               </a>
               <Link className="home-cta-contact" href="/contact">Prefer the contact page? <span>Visit here <Icon name="arrow" size={14} /></span></Link>

@@ -4,7 +4,7 @@ import { siteConfig, whatsappUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions",
-  description: "Read the general website and inquiry terms for CustomizeBottle customized bottled-water orders.",
+  description: "Read the general website and inquiry terms for APNAAB customized bottled-water orders.",
   alternates: { canonical: "/terms" },
 };
 
@@ -12,15 +12,15 @@ export default function TermsPage() {
   return (
     <section className="section legal-section">
       <div className="container legal-container">
-        <span className="eyebrow">CUSTOMIZEBOTTLE</span>
+        <span className="eyebrow">APNAAB</span>
         <h1>Terms &amp; <em>Conditions</em></h1>
         <p className="legal-lead">These general terms apply to use of this website and to initial discussions about customized bottle orders.</p>
         <div className="legal-updated">Website: {siteConfig.domain}</div>
         <article className="legal-content">
           <h2>1. Website information</h2>
-          <p>This website introduces CustomizeBottle's customized bottled-water service and provides a way to request a quotation. Product descriptions and water-motion visuals are for general information and design inspiration. Final product specifications are the details confirmed in the written quotation for an order.</p>
+          <p>This website introduces APNAAB's customized bottled-water service and provides a way to request a quotation. Product descriptions and water-motion visuals are for general information and design inspiration. Final product specifications are the details confirmed in the written quotation for an order.</p>
           <h2>2. Minimum order quantity</h2>
-          <p>The current minimum order quantity shown on this website is {siteConfig.minimumOrder} bottles. Any exception must be agreed with CustomizeBottle in writing before an order is accepted.</p>
+          <p>The current minimum order quantity shown on this website is {siteConfig.minimumOrder} bottles. Any exception must be agreed with APNAAB in writing before an order is accepted.</p>
           <h2>3. Quotations and pricing</h2>
           <p>Prices are not fixed by the website. A quotation is prepared according to the agreed bottle specifications, label requirements, order quantity and delivery arrangements. A WhatsApp inquiry is a request for information and is not, by itself, acceptance of an order or a confirmed price.</p>
           <h2>4. Artwork and customer approval</h2>
@@ -34,7 +34,7 @@ export default function TermsPage() {
           <h2>8. Changes to these terms</h2>
           <p>These website terms may be updated as the service and website develop. Specific order terms agreed in a written quotation will govern the relevant order to the extent they differ from general website information.</p>
           <h2>9. Contact</h2>
-          <p>For questions about these terms or to request a quotation, contact us through <a href={whatsappUrl("Hello CustomizeBottle, I have a question about the website terms and conditions.")} target="_blank" rel="noreferrer">WhatsApp at {siteConfig.whatsappDisplay}</a>.</p>
+          <p>For questions about these terms or to request a quotation, contact us through <a href={whatsappUrl("Hello APNAAB, I have a question about the website terms and conditions.")} target="_blank" rel="noreferrer">WhatsApp at {siteConfig.whatsappDisplay}</a>.</p>
         </article>
         <div className="legal-back"><Link href="/">Back to home</Link><Link href="/privacy-policy">Read Privacy Policy</Link></div>
       </div>

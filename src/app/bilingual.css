@@ -213,8 +213,7 @@ html[dir="rtl"] .brand,
 html[dir="rtl"] .brand-copy,
 html[dir="rtl"] .home-water-note,
 html[dir="rtl"] .home-hero-bottomline,
-html[dir="rtl"] .water-bottle-art,
-html[dir="rtl"] .water-bottle-label {
+html[dir="rtl"] .apnaab-bottle-svg {
   direction: ltr;
 }
 html[dir="rtl"] .brand-copy { text-align: left; }

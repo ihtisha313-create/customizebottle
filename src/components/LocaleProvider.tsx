@@ -24,6 +24,8 @@ const translations: Record<string, string> = {
   "Contact": "رابطہ",
   "Request a Quote": "قیمت معلوم کریں",
   "CUSTOM-BRANDED BOTTLES & SUPPLY": "آپ کے برانڈ کی خصوصی بوتلیں",
+  "CUSTOM-BRANDED WATER": "خصوصی برانڈ والی پانی کی بوتلیں",
+  "APNAAB · CUSTOM-BRANDED WATER FOR YOUR BUSINESS": "آپ کے کاروبار کے لیے APNAAB کی خصوصی برانڈ والی پانی کی بوتلیں",
   "Skip to content": "مرکزی مواد پر جائیں",
   "Close menu": "مینو بند کریں",
   "Open menu": "مینو کھولیں",
@@ -122,7 +124,7 @@ const translations: Record<string, string> = {
   "Arrange your supply": "سپلائی کا انتظام کریں",
   "Coordinate preparation and delivery for your confirmed order.": "اپنے منظور شدہ آرڈر کی تیاری اور ڈیلیوری کا انتظام کریں۔",
   "View the ordering process": "آرڈر کا طریقۂ کار دیکھیں",
-  "THE CUSTOMIZEBOTTLE APPROACH": "CustomizeBottle کا طریقۂ کار",
+  "THE APNAAB APPROACH": "APNAAB کا طریقۂ کار",
   "Well presented.": "خوبصورت پیشکش۔",
   "Clearly agreed.": "ہر بات واضح اور طے شدہ۔",
   "A custom bottle order should suit your identity, your quantity and the occasion. We discuss the details with you before anything is confirmed.": "خصوصی بوتلوں کا آرڈر آپ کے برانڈ، تعداد اور موقع کے مطابق ہونا چاہیے۔ حتمی منظوری سے پہلے ہم آپ کے ساتھ تمام تفصیلات طے کرتے ہیں۔",
@@ -144,14 +146,14 @@ const translations: Record<string, string> = {
   "Prefer the contact page?": "کیا آپ رابطہ فارم استعمال کرنا چاہتے ہیں؟",
   "Visit here": "یہاں جائیں",
 
-  "ABOUT CUSTOMIZEBOTTLE": "CustomizeBottle کے بارے میں",
+  "ABOUT APNAAB": "APNAAB کے بارے میں",
   "We help your brand": "ہم آپ کے برانڈ کو",
   "show up in the details.": "ہر چھوٹی تفصیل میں نمایاں کرتے ہیں۔",
   "Customized drinking-water bottles for businesses that care about the experience they create.": "ان کاروباروں کے لیے خصوصی لیبل والی پانی کی بوتلیں جو اپنے صارفین کے تجربے کو اہمیت دیتے ہیں۔",
   "WHO WE ARE": "ہم کون ہیں",
   "A practical service with": "ایک آسان خدمت،",
   "your business in mind.": "آپ کے کاروبار کو مدِنظر رکھتے ہوئے۔",
-  "CustomizeBottle is a Peshawar-based business being developed to help hotels, restaurants, hospitals, wedding halls, event organizers and other businesses order drinking-water bottles with labels shaped around their own identity.": "CustomizeBottle پشاور میں قائم ایک کاروبار ہے جس کا مقصد ہوٹلوں، ریسٹورنٹس، ہسپتالوں، شادی ہالز، ایونٹ آرگنائزرز اور دیگر کاروباروں کو ان کی اپنی شناخت کے مطابق لیبل والی پانی کی بوتلیں فراہم کرنے میں مدد دینا ہے۔",
+  "APNAAB is a Peshawar-based business being developed to help hotels, restaurants, hospitals, wedding halls, event organizers and other businesses order drinking-water bottles with labels shaped around their own identity.": "APNAAB پشاور میں قائم ایک کاروبار ہے جس کا مقصد ہوٹلوں، ریسٹورنٹس، ہسپتالوں، شادی ہالز، ایونٹ آرگنائزرز اور دیگر کاروباروں کو ان کی اپنی شناخت کے مطابق لیبل والی پانی کی بوتلیں فراہم کرنے میں مدد دینا ہے۔",
   "Customers can discuss their logo, brand colours, business information and order requirements with us. We coordinate the design and complete bottled-water order around the details agreed in the quotation.": "صارفین اپنے لوگو، برانڈ کے رنگ، کاروباری معلومات اور آرڈر کی ضروریات پر ہم سے بات کر سکتے ہیں۔ ہم طے شدہ کوٹیشن کے مطابق ڈیزائن اور مکمل بوتلوں کے آرڈر کا انتظام کرتے ہیں۔",
   "Our starting offer is a customized 500 ml bottle, with a minimum order of": "ہماری ابتدائی پیشکش خصوصی لیبل والی 500 ملی لیٹر بوتل ہے، جس کا کم از کم آرڈر",
   "Discuss your order": "اپنے آرڈر پر بات کریں",
@@ -175,7 +177,7 @@ const translations: Record<string, string> = {
   "Tell us what your": "اپنے",
   "business needs.": "کاروبار کی ضرورت بتائیں۔",
   "Share your idea and we'll discuss the available next steps.": "اپنا خیال شیئر کریں، ہم اگلے ممکنہ مراحل پر بات کریں گے۔",
-  "Contact CustomizeBottle": "CustomizeBottle سے رابطہ کریں",
+  "Contact APNAAB": "APNAAB سے رابطہ کریں",
 
   "OUR BOTTLES": "ہماری بوتلیں",
   "One bottle.": "ایک بوتل۔",
@@ -222,7 +224,7 @@ const translations: Record<string, string> = {
   "custom bottle order.": "خصوصی بوتلوں کا آرڈر طے کریں۔",
   "Start with your quantity, business type and preferred label direction.": "اپنی تعداد، کاروبار کی نوعیت اور پسندیدہ لیبل ڈیزائن سے آغاز کریں۔",
 
-  "CONTACT CUSTOMIZEBOTTLE": "CustomizeBottle سے رابطہ کریں",
+  "CONTACT APNAAB": "APNAAB سے رابطہ کریں",
   "Let's create a bottle": "آئیے ایک ایسی بوتل بنائیں",
   "that feels like yours.": "جو آپ کی اپنی پہچان ہو۔",
   "Tell us about your business, the quantity you need and how you'd like your bottles to look.": "اپنے کاروبار، درکار تعداد اور بوتلوں کے پسندیدہ انداز کے بارے میں بتائیں۔",
@@ -386,7 +388,7 @@ const translations: Record<string, string> = {
   "A versatile direction for catered functions and hosted events.": "کیٹرنگ اور تقریبات کے لیے ہمہ گیر ڈیزائن۔",
   "Filter concept examples": "ڈیزائن کے نمونے فلٹر کریں",
 
-  "CUSTOMIZEBOTTLE": "CUSTOMIZEBOTTLE",
+  "APNAAB": "APNAAB",
   "Privacy": "رازداری",
   "Policy": "پالیسی",
   "This page explains what happens when you visit our website or use its inquiry features.": "یہ صفحہ بتاتا ہے کہ ہماری ویب سائٹ دیکھنے یا رابطے کی سہولت استعمال کرنے پر آپ کی معلومات کے ساتھ کیا ہوتا ہے۔",
@@ -396,7 +398,7 @@ const translations: Record<string, string> = {
   "2. WhatsApp inquiries": "2۔ واٹس ایپ پر رابطہ",
   "When you select a WhatsApp contact or submit the quotation form, your browser opens WhatsApp with a prepared message. The message is not sent until you choose to send it in WhatsApp. Information you send through WhatsApp is handled by WhatsApp under its own terms and privacy policy.": "جب آپ واٹس ایپ رابطہ منتخب کرتے یا کوٹیشن فارم مکمل کرتے ہیں تو آپ کے براؤزر میں تیار شدہ پیغام کے ساتھ واٹس ایپ کھلتا ہے۔ آپ کی اجازت کے بغیر پیغام نہیں بھیجا جاتا۔ واٹس ایپ کے ذریعے بھیجی گئی معلومات واٹس ایپ کی اپنی شرائط اور رازداری کی پالیسی کے مطابق استعمال ہوتی ہیں۔",
   "3. Website storage": "3۔ ویب سائٹ پر معلومات کا ذخیرہ",
-  "This website does not provide customer accounts, online payments or a database-backed inquiry submission service. The quotation form formats the inquiry in your browser and opens WhatsApp; it does not submit the form contents to a CustomizeBottle website database.": "یہ ویب سائٹ صارف اکاؤنٹس، آن لائن ادائیگی یا ڈیٹا بیس کے ذریعے استفسار جمع کرنے کی سہولت فراہم نہیں کرتی۔ کوٹیشن فارم آپ کے براؤزر میں پیغام تیار کر کے واٹس ایپ کھولتا ہے؛ فارم کا ڈیٹا CustomizeBottle کے ویب سائٹ ڈیٹا بیس میں جمع نہیں ہوتا۔",
+  "This website does not provide customer accounts, online payments or a database-backed inquiry submission service. The quotation form formats the inquiry in your browser and opens WhatsApp; it does not submit the form contents to a APNAAB website database.": "یہ ویب سائٹ صارف اکاؤنٹس، آن لائن ادائیگی یا ڈیٹا بیس کے ذریعے استفسار جمع کرنے کی سہولت فراہم نہیں کرتی۔ کوٹیشن فارم آپ کے براؤزر میں پیغام تیار کر کے واٹس ایپ کھولتا ہے؛ فارم کا ڈیٹا APNAAB کے ویب سائٹ ڈیٹا بیس میں جمع نہیں ہوتا۔",
   "4. Technical information": "4۔ تکنیکی معلومات",
   "The website is hosted by a third-party hosting provider. The provider may process technical information such as IP address, browser details and request logs as needed to deliver, secure and maintain the website. We have not added advertising trackers or an analytics profile to the current website.": "ویب سائٹ ایک بیرونی ہوسٹنگ فراہم کنندہ کے ذریعے چلائی جاتی ہے۔ ویب سائٹ کی فراہمی، حفاظت اور دیکھ بھال کے لیے ہوسٹنگ فراہم کنندہ آئی پی ایڈریس، براؤزر کی تفصیلات اور درخواستوں کے لاگز جیسی تکنیکی معلومات استعمال کر سکتا ہے۔ موجودہ ویب سائٹ میں اشتہاری ٹریکرز یا صارفین کی تجزیاتی پروفائلنگ شامل نہیں کی گئی۔",
   "5. Visual design and external services": "5۔ بصری ڈیزائن اور بیرونی خدمات",
@@ -412,10 +414,10 @@ const translations: Record<string, string> = {
   "Conditions": "ضوابط",
   "These general terms apply to use of this website and to initial discussions about customized bottle orders.": "یہ عمومی شرائط اس ویب سائٹ کے استعمال اور خصوصی بوتلوں کے آرڈرز سے متعلق ابتدائی گفتگو پر لاگو ہوتی ہیں۔",
   "1. Website information": "1۔ ویب سائٹ کی معلومات",
-  "This website introduces CustomizeBottle's customized bottled-water service and provides a way to request a quotation. Product descriptions and water-motion visuals are for general information and design inspiration. Final product specifications are the details confirmed in the written quotation for an order.": "یہ ویب سائٹ CustomizeBottle کی خصوصی لیبل والی پانی کی بوتلوں کی خدمت متعارف کراتی ہے اور قیمت معلوم کرنے کا طریقہ فراہم کرتی ہے۔ مصنوعات کی تفصیلات اور پانی سے متعلق متحرک ویژول عمومی معلومات اور ڈیزائن آئیڈیاز کے لیے ہیں۔ حتمی مصنوعات کی خصوصیات آرڈر کی تحریری کوٹیشن میں طے ہوں گی۔",
+  "This website introduces APNAAB's customized bottled-water service and provides a way to request a quotation. Product descriptions and water-motion visuals are for general information and design inspiration. Final product specifications are the details confirmed in the written quotation for an order.": "یہ ویب سائٹ APNAAB کی خصوصی لیبل والی پانی کی بوتلوں کی خدمت متعارف کراتی ہے اور قیمت معلوم کرنے کا طریقہ فراہم کرتی ہے۔ مصنوعات کی تفصیلات اور پانی سے متعلق متحرک ویژول عمومی معلومات اور ڈیزائن آئیڈیاز کے لیے ہیں۔ حتمی مصنوعات کی خصوصیات آرڈر کی تحریری کوٹیشن میں طے ہوں گی۔",
   "2. Minimum order quantity": "2۔ کم از کم آرڈر کی تعداد",
   "The current minimum order quantity shown on this website is": "اس ویب سائٹ پر موجودہ کم از کم آرڈر کی تعداد",
-  "Any exception must be agreed with CustomizeBottle in writing before an order is accepted.": "کسی بھی استثنا پر آرڈر قبول کرنے سے پہلے CustomizeBottle کے ساتھ تحریری اتفاق ضروری ہے۔",
+  "Any exception must be agreed with APNAAB in writing before an order is accepted.": "کسی بھی استثنا پر آرڈر قبول کرنے سے پہلے APNAAB کے ساتھ تحریری اتفاق ضروری ہے۔",
   "3. Quotations and pricing": "3۔ کوٹیشن اور قیمتیں",
   "Prices are not fixed by the website. A quotation is prepared according to the agreed bottle specifications, label requirements, order quantity and delivery arrangements. A WhatsApp inquiry is a request for information and is not, by itself, acceptance of an order or a confirmed price.": "ویب سائٹ پر قیمتیں مقرر نہیں کی گئیں۔ کوٹیشن بوتل کی طے شدہ خصوصیات، لیبل کی ضروریات، آرڈر کی تعداد اور ڈیلیوری کے انتظامات کے مطابق تیار ہوتی ہے۔ واٹس ایپ پر رابطہ صرف معلومات کی درخواست ہے، یہ بذاتِ خود آرڈر کی منظوری یا حتمی قیمت نہیں ہے۔",
   "4. Artwork and customer approval": "4۔ ڈیزائن اور صارف کی منظوری",
@@ -433,7 +435,7 @@ const translations: Record<string, string> = {
   "PAGE NOT FOUND": "صفحہ نہیں ملا",
   "This page seems to have": "لگتا ہے یہ صفحہ",
   "gone missing.": "دستیاب نہیں ہے۔",
-  "The link may be outdated or the page may have moved. Head back to CustomizeBottle or contact our team for help.": "ممکن ہے لنک پرانا ہو یا صفحہ منتقل ہو گیا ہو۔ CustomizeBottle کے ہوم پیج پر واپس جائیں یا مدد کے لیے ہماری ٹیم سے رابطہ کریں۔",
+  "The link may be outdated or the page may have moved. Head back to APNAAB or contact our team for help.": "ممکن ہے لنک پرانا ہو یا صفحہ منتقل ہو گیا ہو۔ APNAAB کے ہوم پیج پر واپس جائیں یا مدد کے لیے ہماری ٹیم سے رابطہ کریں۔",
 
   "From": "کم از کم",
   "PURE PRESENTATION": "سادہ، نفیس پیشکش",
@@ -447,7 +449,7 @@ const translations: Record<string, string> = {
   "ILLUSTRATIVE PRODUCT VISUAL": "مصنوعات کا نمائشی خاکہ",
   "Request a quote": "قیمت معلوم کریں",
   "CONCEPT EXAMPLE": "ڈیزائن کا نمونہ",
-  "CUSTOMIZEBOTTLE · 500 ML": "CUSTOMIZEBOTTLE · 500 ملی لیٹر",
+  "APNAAB · 500 ML": "APNAAB · 500 ملی لیٹر",
   "DINING COLLECTION": "ڈائننگ کلیکشن",
   "CARE COLLECTION": "نگہداشت کلیکشن",
   "CELEBRATION COLLECTION": "تقریبات کا کلیکشن",
@@ -455,7 +457,7 @@ const translations: Record<string, string> = {
   "Peshawar, Pakistan": "پشاور، پاکستان",
   "MINIMUM ORDER": "کم از کم آرڈر",
   "Chat directly on WhatsApp": "واٹس ایپ پر براہِ راست بات کریں",
-  "When you choose Urdu, the site saves that language preference in your browser's local storage so it can remember your choice on a later visit. That preference is not sent to CustomizeBottle.": "جب آپ اردو منتخب کرتے ہیں تو ویب سائٹ آپ کی زبان کی یہ ترجیح براؤزر کی لوکل اسٹوریج میں محفوظ کرتی ہے تاکہ اگلی بار آپ کی پسند یاد رکھی جا سکے۔ یہ ترجیح CustomizeBottle کو نہیں بھیجی جاتی۔",
+  "When you choose Urdu, the site saves that language preference in your browser's local storage so it can remember your choice on a later visit. That preference is not sent to APNAAB.": "جب آپ اردو منتخب کرتے ہیں تو ویب سائٹ آپ کی زبان کی یہ ترجیح براؤزر کی لوکل اسٹوریج میں محفوظ کرتی ہے تاکہ اگلی بار آپ کی پسند یاد رکھی جا سکے۔ یہ ترجیح APNAAB کو نہیں بھیجی جاتی۔",
   "Page Not Found": "صفحہ نہیں ملا",
 };
 
@@ -478,7 +480,7 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
   const attributeStates = useRef(new WeakMap<Element, Map<string, AttributeState>>());
 
   useEffect(() => {
-    const stored = window.localStorage.getItem("customizebottle-language");
+    const stored = window.localStorage.getItem("apnaab-language");
     if (stored === "ur") setLocale("ur");
   }, []);
 
@@ -486,7 +488,7 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
     const root = document.documentElement;
     root.lang = locale;
     root.dir = locale === "ur" ? "rtl" : "ltr";
-    window.localStorage.setItem("customizebottle-language", locale);
+    window.localStorage.setItem("apnaab-language", locale);
 
     const processText = (node: Text) => {
       const current = node.nodeValue ?? "";

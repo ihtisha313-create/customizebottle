@@ -5,7 +5,7 @@ import WaterBottleVisual from "@/components/WaterBottleVisual";
 
 export default function HomeHeroSlideshow() {
   return (
-    <section className="home-hero" aria-label="CustomizeBottle introduction">
+    <section className="home-hero" aria-label="APNAAB introduction">
       <div className="home-hero-water" aria-hidden="true">
         <span className="home-hero-light home-hero-light-one" />
         <span className="home-hero-light home-hero-light-two" />
@@ -18,14 +18,14 @@ export default function HomeHeroSlideshow() {
       </div>
       <div className="container home-hero-grid">
         <div className="home-hero-content">
-          <span className="home-hero-kicker"><i /> CUSTOM-BRANDED WATER · MADE FOR YOUR BUSINESS</span>
+          <span className="home-hero-kicker"><i /> APNAAB · CUSTOM-BRANDED WATER FOR YOUR BUSINESS</span>
           <h1>Your Brand.<br /><em>On Every Bottle.</em></h1>
           <p>
             Custom-labelled 500 ml drinking water, thoughtfully presented for hotels,
             restaurants, clinics, celebrations and businesses.
           </p>
           <div className="home-hero-actions">
-            <a className="button button-primary home-hero-quote" href={whatsappUrl("Hello CustomizeBottle, I would like a quotation for custom-branded 500 ml bottled water.")} target="_blank" rel="noreferrer">
+            <a className="button button-primary home-hero-quote" href={whatsappUrl("Hello APNAAB, I would like a quotation for custom-branded 500 ml bottled water.")} target="_blank" rel="noreferrer">
               <Icon name="whatsapp" size={18} /> Request a Quote
             </a>
             <Link className="home-hero-explore" href="/bottles">Explore bottle options <Icon name="arrow" size={15} /></Link>
@@ -37,7 +37,7 @@ export default function HomeHeroSlideshow() {
           </div>
         </div>
         <div className="home-hero-visual">
-          <WaterBottleVisual label="YOUR BRAND" caption="500 ML · CUSTOM LABEL" />
+          <WaterBottleVisual label="APNAAB" caption="500 ML · CUSTOM LABEL" />
           <span className="home-water-note"><b>01</b> THE WATER, YOUR IDENTITY</span>
         </div>
       </div>

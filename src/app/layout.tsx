@@ -15,27 +15,27 @@ import "./bilingual.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope", display: "swap" });
-const urdu = Noto_Nastaliq_Urdu({ subsets: ["arabic"], weight: ["400", "500", "600", "700"], variable: "--font-urdu", display: "swap" });
+const urdu = Noto_Nastaliq_Urdu({ subsets: ["arabic"], weight: ["400", "700"], variable: "--font-urdu", display: "swap", preload: false });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
-  title: { default: "CustomizeBottle | Custom-Branded Bottled Water for Businesses", template: "%s | CustomizeBottle" },
+  title: { default: "APNAAB | Custom-Branded Bottled Water for Businesses", template: "%s | APNAAB" },
   description: "Customized drinking-water bottles for hotels, restaurants, hospitals, wedding halls, events and businesses across Pakistan. Minimum order starts at 500 bottles.",
-  applicationName: "CustomizeBottle",
+  applicationName: "APNAAB",
   icons: { icon: "/favicon.svg" },
   alternates: { canonical: siteConfig.domain },
   openGraph: {
     type: "website",
     locale: "en_PK",
     url: siteConfig.domain,
-    siteName: "CustomizeBottle",
-    title: "Your Brand. On Every Bottle. | CustomizeBottle",
+    siteName: "APNAAB",
+    title: "Your Brand. On Every Bottle. | APNAAB",
     description: "Custom-branded bottled-water solutions for businesses across Pakistan.",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "CustomizeBottle custom-branded bottled-water solutions" }]
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "APNAAB custom-branded bottled-water solutions" }]
   },
   twitter: {
     card: "summary_large_image",
-    title: "CustomizeBottle | Your Brand. On Every Bottle.",
+    title: "APNAAB | Your Brand. On Every Bottle.",
     description: "Custom-branded bottled-water solutions for businesses.",
     images: ["/opengraph-image"]
   },

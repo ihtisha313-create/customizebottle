@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig, whatsappUrl } from "@/lib/site";
-export const metadata: Metadata = { title: "Privacy Policy", description: "Learn how the CustomizeBottle website handles information shared through quotation inquiries and WhatsApp contact links.", alternates: { canonical: "/privacy-policy" } };
+export const metadata: Metadata = { title: "Privacy Policy", description: "Learn how the APNAAB website handles information shared through quotation inquiries and WhatsApp contact links.", alternates: { canonical: "/privacy-policy" } };
 export default function PrivacyPolicyPage() {
   return (
     <section className="section legal-section">
       <div className="container legal-container">
-        <span className="eyebrow">CUSTOMIZEBOTTLE</span>
+        <span className="eyebrow">APNAAB</span>
         <h1>Privacy <em>Policy</em></h1>
         <p className="legal-lead">This page explains what happens when you visit our website or use its inquiry features.</p>
         <div className="legal-updated">Website: {siteConfig.domain}</div>
@@ -16,7 +16,7 @@ export default function PrivacyPolicyPage() {
           <h2>2. WhatsApp inquiries</h2>
           <p>When you select a WhatsApp contact or submit the quotation form, your browser opens WhatsApp with a prepared message. The message is not sent until you choose to send it in WhatsApp. Information you send through WhatsApp is handled by WhatsApp under its own terms and privacy policy.</p>
           <h2>3. Website storage</h2>
-          <p>This website does not provide customer accounts, online payments or a database-backed inquiry submission service. The quotation form formats the inquiry in your browser and opens WhatsApp; it does not submit the form contents to a CustomizeBottle website database. When you choose Urdu, the site saves that language preference in your browser's local storage so it can remember your choice on a later visit. That preference is not sent to CustomizeBottle.</p>
+          <p>This website does not provide customer accounts, online payments or a database-backed inquiry submission service. The quotation form formats the inquiry in your browser and opens WhatsApp; it does not submit the form contents to a APNAAB website database. When you choose Urdu, the site saves that language preference in your browser's local storage so it can remember your choice on a later visit. That preference is not sent to APNAAB.</p>
           <h2>4. Technical information</h2>
           <p>The website is hosted by a third-party hosting provider. The provider may process technical information such as IP address, browser details and request logs as needed to deliver, secure and maintain the website. We have not added advertising trackers or an analytics profile to the current website.</p>
           <h2>5. Visual design and external services</h2>
@@ -26,7 +26,7 @@ export default function PrivacyPolicyPage() {
           <h2>7. Updates</h2>
           <p>This policy may be updated when website features or business practices change. The current version will be published on this page.</p>
           <h2>8. Questions</h2>
-          <p>For a privacy-related question, contact us through <a href={whatsappUrl("Hello CustomizeBottle, I have a question about the website privacy policy.")} target="_blank" rel="noreferrer">WhatsApp at {siteConfig.whatsappDisplay}</a>.</p>
+          <p>For a privacy-related question, contact us through <a href={whatsappUrl("Hello APNAAB, I have a question about the website privacy policy.")} target="_blank" rel="noreferrer">WhatsApp at {siteConfig.whatsappDisplay}</a>.</p>
         </article>
         <div className="legal-back"><Link href="/">Back to home</Link><Link href="/terms">Read Terms &amp; Conditions</Link></div>
       </div>

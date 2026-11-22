@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "CustomizeBottle",
-    short_name: "CustomizeBottle",
+    name: "APNAAB",
+    short_name: "APNAAB",
     description: "Customized drinking-water bottles for businesses.",
     start_url: "/",
     display: "standalone",
