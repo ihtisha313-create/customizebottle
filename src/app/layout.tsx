@@ -1,18 +1,21 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Manrope } from "next/font/google";
+import { Inter, Manrope, Noto_Nastaliq_Urdu } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import WaterAtmosphere from "@/components/WaterAtmosphere";
+import { LocaleProvider } from "@/components/LocaleProvider";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 import "./phase2.css";
 import "./phase3.css";
 import "./homepage.css";
 import "./water-theme.css";
+import "./bilingual.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope", display: "swap" });
+const urdu = Noto_Nastaliq_Urdu({ subsets: ["arabic"], weight: ["400", "500", "600", "700"], variable: "--font-urdu", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
@@ -54,15 +57,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   };
 
   return (
-    <html lang="en" className={inter.variable + " " + manrope.variable}>
+    <html lang="en" className={inter.variable + " " + manrope.variable + " " + urdu.variable}>
       <body>
-        <WaterAtmosphere />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }} />
-        <a className="skip-to-content" href="#main-content">Skip to content</a>
-        <Header />
-        <main id="main-content">{children}</main>
-        <Footer />
-        <WhatsAppFloat />
+        <LocaleProvider>
+          <WaterAtmosphere />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }} />
+          <a className="skip-to-content" href="#main-content">Skip to content</a>
+          <Header />
+          <main id="main-content">{children}</main>
+          <Footer />
+          <WhatsAppFloat />
+        </LocaleProvider>
       </body>
     </html>
   );

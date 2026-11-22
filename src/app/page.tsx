@@ -35,6 +35,36 @@ export default function HomePage() {
       <HomeMotion />
       <HomeHeroSlideshow />
 
+      <section className="home-intent-section" aria-labelledby="home-intent-title">
+        <div className="container">
+          <div className="home-intent-heading">
+            <span className="home-section-kicker">START WITH WHAT YOU NEED</span>
+            <h2 id="home-intent-title">What would you like to arrange?</h2>
+            <p>Choose the option that best matches your need. We’ll guide you to the right next step.</p>
+          </div>
+          <div className="home-intent-grid">
+            <Link className="home-intent-card" href="/industries">
+              <span className="home-intent-card-icon"><Icon name="building" size={21}/></span>
+              <h3>For my business</h3>
+              <p>Hotels, restaurants, clinics, offices and hospitality spaces.</p>
+              <span>Explore business options <Icon name="arrow" size={14}/></span>
+            </Link>
+            <Link className="home-intent-card" href="/industries">
+              <span className="home-intent-card-icon"><Icon name="calendar" size={21}/></span>
+              <h3>For an event</h3>
+              <p>Weddings, celebrations, conferences and catering services.</p>
+              <span>Explore event options <Icon name="arrow" size={14}/></span>
+            </Link>
+            <Link className="home-intent-card" href="/contact">
+              <span className="home-intent-card-icon"><Icon name="message" size={21}/></span>
+              <h3>I need a quotation</h3>
+              <p>Share your quantity, delivery city and label idea with us.</p>
+              <span>Start my quote <Icon name="arrow" size={14}/></span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="home-quick-facts water-glass-strip">
         <div className="container home-quick-facts-grid">
           <div className="home-fact" data-reveal>
