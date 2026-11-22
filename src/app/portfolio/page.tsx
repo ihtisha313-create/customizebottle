@@ -31,7 +31,7 @@ export default function PortfolioPage() {
       <section className="closing-cta">
         <div className="container closing-cta-inner">
           <div><span className="eyebrow">HAVE A DESIGN IN MIND?</span><h2>Let's make a label <em>for your business.</em></h2><p>Share your logo, preferred style and expected quantity.</p><span className="minimum-note">Minimum order: {siteConfig.minimumOrder} bottles</span></div>
-          <a className="button button-primary button-large" href={whatsappUrl("Hello CustomizeBottle, I have a bottle label design idea and would like to discuss a customized order.")} target="_blank" rel="noreferrer"><Icon name="whatsapp" size={19}/> Discuss your design</a>
+          <a className="button button-primary button-large" href={whatsappUrl("Hello APNAAB, I have a bottle label design idea and would like to discuss a customized order.")} target="_blank" rel="noreferrer"><Icon name="whatsapp" size={19}/> Discuss your design</a>
         </div>
       </section>
     </>
