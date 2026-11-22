@@ -16,7 +16,7 @@ export default function PrivacyPolicyPage() {
           <h2>2. WhatsApp inquiries</h2>
           <p>When you select a WhatsApp contact or submit the quotation form, your browser opens WhatsApp with a prepared message. The message is not sent until you choose to send it in WhatsApp. Information you send through WhatsApp is handled by WhatsApp under its own terms and privacy policy.</p>
           <h2>3. Website storage</h2>
-          <p>This website does not provide customer accounts, online payments or a database-backed inquiry submission service. The quotation form formats the inquiry in your browser and opens WhatsApp; it does not submit the form contents to a CustomizeBottle website database.</p>
+          <p>This website does not provide customer accounts, online payments or a database-backed inquiry submission service. The quotation form formats the inquiry in your browser and opens WhatsApp; it does not submit the form contents to a CustomizeBottle website database. When you choose Urdu, the site saves that language preference in your browser's local storage so it can remember your choice on a later visit. That preference is not sent to CustomizeBottle.</p>
           <h2>4. Technical information</h2>
           <p>The website is hosted by a third-party hosting provider. The provider may process technical information such as IP address, browser details and request logs as needed to deliver, secure and maintain the website. We have not added advertising trackers or an analytics profile to the current website.</p>
           <h2>5. Visual design and external services</h2>

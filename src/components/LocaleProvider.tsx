@@ -455,6 +455,7 @@ const translations: Record<string, string> = {
   "Peshawar, Pakistan": "پشاور، پاکستان",
   "MINIMUM ORDER": "کم از کم آرڈر",
   "Chat directly on WhatsApp": "واٹس ایپ پر براہِ راست بات کریں",
+  "When you choose Urdu, the site saves that language preference in your browser's local storage so it can remember your choice on a later visit. That preference is not sent to CustomizeBottle.": "جب آپ اردو منتخب کرتے ہیں تو ویب سائٹ آپ کی زبان کی یہ ترجیح براؤزر کی لوکل اسٹوریج میں محفوظ کرتی ہے تاکہ اگلی بار آپ کی پسند یاد رکھی جا سکے۔ یہ ترجیح CustomizeBottle کو نہیں بھیجی جاتی۔",
   "Page Not Found": "صفحہ نہیں ملا",
 };
 
