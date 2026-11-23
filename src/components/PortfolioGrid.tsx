@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useMemo, useState } from "react";
 import { Icon } from "@/components/Icons";
 
@@ -37,7 +38,7 @@ export default function PortfolioGrid() {
         {visible.map((item, index) => (
           <article className="portfolio-card" key={item.title}>
             <div className="portfolio-image">
-              <img className="portfolio-photo" src={item.image} alt={item.alt} width="960" height="720" loading="lazy" decoding="async" />
+              <Image className="portfolio-photo" src={item.image} alt={item.alt} fill sizes="(max-width: 560px) 100vw, (max-width: 1000px) 50vw, 33vw" loading="lazy" />
               <span className="portfolio-index">0{index + 1}</span>
               <span className="portfolio-concept">SETTING INSPIRATION</span>
               <span className="portfolio-water-icon"><Icon name={item.icon} size={30}/></span>
