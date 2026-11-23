@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Icon } from "@/components/Icons";
 import WaterHero from "@/components/WaterHero";
 import { siteConfig, whatsappUrl } from "@/lib/site";
@@ -37,7 +38,7 @@ export default function IndustriesPage() {
             {sectors.map((sector, index) => (
               <article className="industry-detail-card" key={sector.title}>
                 <div className={`industry-detail-image industry-water-panel water-tone-${index + 1}`}>
-                  <img className="industry-detail-photo" src={sector.image} alt={sector.imageAlt} width="960" height="720" loading="lazy" decoding="async" />
+                  <Image className="industry-detail-photo" src={sector.image} alt={sector.imageAlt} fill sizes="(max-width: 820px) 100vw, 42vw" loading="lazy" />
                   <span className="industry-water-index">0{index + 1}</span>
                   <span className="industry-water-icon"><Icon name={sector.icon} size={43}/></span>
                   <span className="industry-water-caption">APNAAB · CUSTOM-LABELLED WATER</span>
