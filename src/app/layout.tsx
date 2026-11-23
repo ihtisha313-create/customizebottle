@@ -12,6 +12,7 @@ import "./phase3.css";
 import "./homepage.css";
 import "./water-theme.css";
 import "./bilingual.css";
+import "./responsive.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope", display: "swap" });

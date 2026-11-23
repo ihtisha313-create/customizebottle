@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@/components/Icons";
 import { siteConfig, whatsappUrl } from "@/lib/site";
@@ -5,7 +6,7 @@ export default function Footer() {
   return <footer className="site-footer">
     <div className="container footer-main">
       <div className="footer-brand-block">
-        <Link className="brand brand-light" href="/"><span className="brand-mark"><Icon name="droplet" size={25}/></span><span className="brand-copy"><strong>APNAAB</strong><small>CUSTOM-BRANDED WATER</small></span></Link>
+        <Link className="brand brand-light footer-brand" href="/" aria-label="APNAAB — Your name on every drop"><Image className="footer-full-logo" src="/apnaab-logo.svg" alt="APNAAB logo — Your name on every drop" width={1115} height={790} sizes="(max-width: 560px) 160px, 205px" /></Link>
         <p>Customized drinking-water bottles that help your business make a lasting impression.</p>
         <span className="footer-location"><Icon name="pin" size={16}/> {siteConfig.location}</span>
       </div>

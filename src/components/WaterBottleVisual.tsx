@@ -86,8 +86,7 @@ export default function WaterBottleVisual({
         <rect x="98" y="319" width="184" height="139" rx="10" fill={`url(#${labelFill})`} stroke="#ffffff" strokeWidth="4"/>
         <rect x="105" y="326" width="170" height="125" rx="7" fill="none" stroke="#0b7d91" strokeOpacity=".22" strokeWidth="1.5"/>
         <path d="M113 344H267" stroke="#12a5ab" strokeOpacity=".26" strokeWidth="2"/>
-        <circle cx="190" cy="365" r="14" fill="#087f91"/>
-        <path d="M190 353C190 353 182 362 182 367A8 8 0 0 0 198 367C198 362 190 353 190 353Z" fill="#e8ffff"/>
+        <image href="/apnaab-symbol.svg" x="170" y="344" width="40" height="31" preserveAspectRatio="xMidYMid meet"/>
         <text x="190" y="405" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="29" fontWeight="800" letterSpacing="1.2" fill="#073a50">{label}</text>
         <text x="190" y="426" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="9" fontWeight="800" letterSpacing="2.2" fill="#087e8b">CUSTOM DRINKING WATER</text>
         <path d="M135 438H245" stroke="#0e9fa7" strokeOpacity=".45" strokeWidth="1.5"/>

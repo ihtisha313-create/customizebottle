@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Icon } from "@/components/Icons";
@@ -21,10 +22,10 @@ export default function Header() {
     <header className="site-header">
       <div className="container header-inner">
         <Link className="brand" href="/" aria-label="APNAAB home" onClick={() => setOpen(false)}>
-          <span className="brand-mark"><Icon name="droplet" size={25}/></span>
+          <span className="brand-mark"><Image src="/apnaab-symbol.svg" alt="" width={680} height={587} priority sizes="48px" /></span>
           <span className="brand-copy">
             <strong>APNAAB</strong>
-            <small>CUSTOM-BRANDED WATER</small>
+            <small>YOUR NAME ON EVERY DROP</small>
           </span>
         </Link>
         <button className="mobile-menu-toggle" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen(!open)}>
