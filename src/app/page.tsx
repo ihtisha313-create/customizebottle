@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Icon } from "@/components/Icons";
 import HomeHeroSlideshow from "@/components/HomeHeroSlideshow";
 import WaterBottleVisual from "@/components/WaterBottleVisual";
@@ -128,7 +129,7 @@ export default function HomePage() {
             {industries.map((item, index) => (
               <Link href="/industries" className="home-industry-card" key={item.title} data-reveal>
                 <div className="home-industry-image" aria-hidden="true">
-                  <img src={item.image} alt={item.imageAlt} width="960" height="640" loading="lazy" decoding="async" />
+                  <Image src={item.image} alt={item.imageAlt} fill sizes="(max-width: 560px) 100vw, (max-width: 1000px) 50vw, 33vw" loading="lazy" />
                 </div>
                 <div className="home-industry-shade" aria-hidden="true" />
                 <span className="home-industry-index">0{index + 1}</span>
