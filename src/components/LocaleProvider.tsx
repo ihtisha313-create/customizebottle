@@ -230,7 +230,7 @@ const translations: Record<string, string> = {
   "Tell us what you need and we’ll help you plan your order.": "اپنی ضرورت بتائیں، ہم آپ کے آرڈر کی منصوبہ بندی میں مدد کریں گے۔",
   "Let's talk": "آئیے بات کرتے ہیں",
   "I’m interested in custom-labelled 500 ml bottled water. Could you share the details?": "مجھے خصوصی لیبل والی 500 ملی لیٹر پانی کی بوتلوں میں دلچسپی ہے۔ کیا آپ تفصیلات بتا سکتے ہیں؟",
-  "Please add your name, business name and delivery city so we can prepare your inquiry.": "اپنی درخواست تیار کرنے کے لیے نام، کاروبار کا نام اور ڈیلیوری شہر درج کریں۔"
+  "Please add your name, business name and delivery city so we can prepare your inquiry.": "اپنی درخواست تیار کرنے کے لیے نام، کاروبار کا نام اور ڈیلیوری شہر درج کریں۔",
   "Skip to content": "مرکزی مواد پر جائیں",
   "Close menu": "مینو بند کریں",
   "Open menu": "مینو کھولیں",
