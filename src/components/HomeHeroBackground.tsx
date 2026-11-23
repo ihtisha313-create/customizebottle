@@ -21,14 +21,16 @@ export default function HomeHeroBackground() {
       }
     ).connection;
 
-    // Preserve instant poster rendering for visitors who prefer reduced motion
-    // or are using a data-saving / very slow mobile connection.
+    // Preserve instant poster rendering and a lighter static treatment for
+    // reduced-motion, data-saving and very slow mobile connections.
+    const mediaRoot = video.closest(".home-hero-media");
     if (
       motionPreference.matches ||
       connection?.saveData ||
       connection?.effectiveType === "2g" ||
       connection?.effectiveType === "slow-2g"
     ) {
+      mediaRoot?.classList.add("is-static");
       return;
     }
 
