@@ -45,10 +45,13 @@ export default function HomeHeroBackground() {
     }
 
     const idleWindow = window as IdleWindow;
+    const heroRoot = video.closest(".home-hero");
     let isInView = false;
+    let isScrolling = false;
     let hasRequestedVideo = false;
     let idleHandle: number | undefined;
     let timeoutHandle: number | undefined;
+    let scrollTimer: number | undefined;
 
     const cancelScheduledLoad = () => {
       if (idleHandle !== undefined) {
@@ -74,7 +77,7 @@ export default function HomeHeroBackground() {
     };
 
     const playWhenVisible = () => {
-      if (!isInView || document.visibilityState !== "visible") return;
+      if (!isInView || isScrolling || document.visibilityState !== "visible") return;
 
       if (hasRequestedVideo) {
         void video.play().catch(() => {});
@@ -113,12 +116,35 @@ export default function HomeHeroBackground() {
       }
     };
 
+    const handleScroll = () => {
+      if (!isInView) return;
+
+      isScrolling = true;
+      heroRoot?.classList.add("is-scrolling");
+      mediaRoot?.classList.add("is-scrolling");
+      video.pause();
+
+      if (scrollTimer !== undefined) window.clearTimeout(scrollTimer);
+      scrollTimer = window.setTimeout(() => {
+        scrollTimer = undefined;
+        isScrolling = false;
+        heroRoot?.classList.remove("is-scrolling");
+        mediaRoot?.classList.remove("is-scrolling");
+        playWhenVisible();
+      }, 180);
+    };
+
     document.addEventListener("visibilitychange", handleVisibilityChange);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       cancelScheduledLoad();
+      if (scrollTimer !== undefined) window.clearTimeout(scrollTimer);
       observer.disconnect();
       document.removeEventListener("visibilitychange", handleVisibilityChange);
+      window.removeEventListener("scroll", handleScroll);
+      heroRoot?.classList.remove("is-scrolling");
+      mediaRoot?.classList.remove("is-scrolling");
       video.pause();
     };
   }, []);
@@ -146,21 +172,24 @@ export default function HomeHeroBackground() {
         <span className="home-hero-glass-shimmer" />
         <div className="home-hero-bubble-field">
           {Array.from({ length: 90 }, (_, index) => {
-            const left = (index * 37 + Math.floor(index / 30) * 13) % 97;
-            const size = 6 + ((index * 17 + 5) % 33);
-            const duration = 12 + ((index * 7) % 13);
-            const delay = -(((index * 11) % 221) / 10);
+            const left = (index * 37 + Math.floor(index / 24) * 13) % 97;
+            const size = 5 + ((index * 17 + 5) % 27);
+            const isAnimated = index < 24;
+            const top = 5 + ((index * 23 + 11) % 88);
+            const duration = 15 + ((index * 7) % 11);
+            const delay = -(((index * 11) % 181) / 10);
 
             return (
               <i
                 key={index}
-                className="hero-bubble"
+                className={isAnimated ? "hero-bubble hero-bubble--animated" : "hero-bubble hero-bubble--static"}
                 style={{
                   left: `${left}%`,
                   width: `${size}px`,
                   height: `${size}px`,
-                  animationDuration: `${duration}s`,
-                  animationDelay: `${delay}s`,
+                  ...(isAnimated
+                    ? { animationDuration: `${duration}s`, animationDelay: `${delay}s` }
+                    : { top: `${top}%` }),
                 }}
               />
             );
