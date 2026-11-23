@@ -97,15 +97,9 @@ export default function HomeHeroBackground() {
         <span className="home-hero-surface-ripple" />
         <span className="home-hero-glass-shimmer" />
         <div className="home-hero-bubble-field">
-          <i className="hero-bubble hero-bubble-1" />
-          <i className="hero-bubble hero-bubble-2" />
-          <i className="hero-bubble hero-bubble-3" />
-          <i className="hero-bubble hero-bubble-4" />
-          <i className="hero-bubble hero-bubble-5" />
-          <i className="hero-bubble hero-bubble-6" />
-          <i className="hero-bubble hero-bubble-7" />
-          <i className="hero-bubble hero-bubble-8" />
-          <i className="hero-bubble hero-bubble-9" />
+          {Array.from({ length: 30 }, (_, index) => (
+            <i key={index} className={`hero-bubble hero-bubble-${index + 1}`} />
+          ))}
         </div>
       </div>
     </div>
