@@ -1349,3 +1349,102 @@ main { position: relative; z-index: 1; }
   .home-hero-visual .apnaab-bottle-sheen,
   .home-hero-visual .apnaab-label-shimmer { display: none; }
 }
+
+
+/* Visibility tune: a clear but restrained hero animation, without altering layout. */
+.home-hero-visual .apnaab-product-stage {
+  contain: layout;
+  overflow: visible;
+}
+.home-hero-visual .apnaab-bottle-svg {
+  animation: apnaab-hero-bottle-float 4.8s cubic-bezier(.45,0,.55,1) infinite;
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+.home-hero-visual .apnaab-stage-halo {
+  animation: apnaab-hero-halo 4.8s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+.home-hero-visual .apnaab-water-surface {
+  animation: apnaab-hero-waterline 3.6s ease-in-out infinite alternate;
+}
+.home-hero-visual .apnaab-bottle-sheen {
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 4px rgba(255,255,255,.28));
+  animation: apnaab-hero-sheen 5.8s ease-in-out -1.25s infinite;
+}
+.home-hero-visual .apnaab-label-shimmer {
+  mix-blend-mode: screen;
+  animation: apnaab-hero-label-sheen 6.2s ease-in-out -1.8s infinite;
+}
+.home-hero-visual .apnaab-cap-glint {
+  animation: apnaab-hero-cap-glint 2.8s ease-in-out infinite;
+}
+.home-hero-visual .apnaab-bubble {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  filter: drop-shadow(0 0 3px rgba(223,255,255,.65));
+  animation: apnaab-hero-bubble-rise 4.6s ease-in -1.7s infinite;
+}
+.home-hero-visual .apnaab-bubble-two { animation-duration: 5.3s; animation-delay: -3.1s; }
+.home-hero-visual .apnaab-bubble-three { animation-duration: 4.9s; animation-delay: -2.4s; }
+.home-hero-visual .apnaab-bubble-four { animation-duration: 5.6s; animation-delay: -4.1s; }
+.home-hero-visual .apnaab-bubble-five { animation-duration: 4.4s; animation-delay: -3.4s; }
+.home-hero-visual .apnaab-bubble-six { animation-duration: 5.1s; animation-delay: -1.2s; }
+.home-hero-visual::after {
+  animation: apnaab-hero-water-ripple 4.7s ease-out -1.6s infinite;
+}
+@keyframes apnaab-hero-bottle-float {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-1.1deg); }
+  50% { transform: translate3d(0, -15px, 0) rotate(1.5deg); }
+}
+@keyframes apnaab-hero-waterline {
+  0% { transform: translateY(-2px) skewX(-2deg); }
+  100% { transform: translateY(7px) skewX(2deg); }
+}
+@keyframes apnaab-hero-sheen {
+  0% { opacity: 0; transform: translateX(-175px); }
+  8% { opacity: .72; }
+  26% { opacity: .34; }
+  43% { opacity: 0; transform: translateX(245px); }
+  100% { opacity: 0; transform: translateX(245px); }
+}
+@keyframes apnaab-hero-label-sheen {
+  0% { opacity: 0; transform: translateX(-125px); }
+  9% { opacity: .42; }
+  30% { opacity: .18; }
+  47% { opacity: 0; transform: translateX(160px); }
+  100% { opacity: 0; transform: translateX(160px); }
+}
+@keyframes apnaab-hero-cap-glint {
+  0%, 100% { opacity: .38; }
+  50% { opacity: 1; }
+}
+@keyframes apnaab-hero-bubble-rise {
+  0% { opacity: 0; transform: translateY(12px) scale(.72); }
+  12% { opacity: .92; }
+  72% { opacity: .7; }
+  100% { opacity: 0; transform: translateY(-102px) scale(1.2); }
+}
+@keyframes apnaab-hero-water-ripple {
+  0% { opacity: .7; transform: translateX(-50%) scale(.72); }
+  72% { opacity: .12; transform: translateX(-50%) scale(1.2); }
+  100% { opacity: 0; transform: translateX(-50%) scale(1.28); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-hero-visual .apnaab-bottle-svg,
+  .home-hero-visual .apnaab-stage-halo,
+  .home-hero-visual .apnaab-water-surface,
+  .home-hero-visual .apnaab-bottle-sheen,
+  .home-hero-visual .apnaab-label-shimmer,
+  .home-hero-visual .apnaab-cap-glint,
+  .home-hero-visual .apnaab-bubble,
+  .home-hero-visual::after {
+    animation: none !important;
+    will-change: auto;
+  }
+  .home-hero-visual .apnaab-bottle-svg { transform: none; }
+  .home-hero-visual .apnaab-bottle-sheen { opacity: .12; }
+  .home-hero-visual .apnaab-label-shimmer { display: none; }
+}

@@ -75,10 +75,12 @@ export default function WaterBottleVisual({
           <circle cx="124" cy="490" r="4" fill="#e5ffff" opacity=".44"/>
           <circle cx="257" cy="473" r="3" fill="#e5ffff" opacity=".5"/>
           <circle cx="145" cy="554" r="2.5" fill="#e5ffff" opacity=".42"/>
-          <circle className="apnaab-bubble apnaab-bubble-one" cx="132" cy="584" r="4" fill="#e9ffff" fillOpacity=".8"/>
-          <circle className="apnaab-bubble apnaab-bubble-two" cx="245" cy="614" r="2.8" fill="#e9ffff" fillOpacity=".75"/>
-          <circle className="apnaab-bubble apnaab-bubble-three" cx="169" cy="629" r="3.2" fill="#e9ffff" fillOpacity=".72"/>
-          <circle className="apnaab-bubble apnaab-bubble-four" cx="257" cy="565" r="2.2" fill="#e9ffff" fillOpacity=".72"/>
+          <circle className="apnaab-bubble apnaab-bubble-one" cx="132" cy="584" r="5.2" fill="#e9ffff" fillOpacity=".86"/>
+          <circle className="apnaab-bubble apnaab-bubble-two" cx="245" cy="614" r="4.1" fill="#e9ffff" fillOpacity=".82"/>
+          <circle className="apnaab-bubble apnaab-bubble-three" cx="169" cy="629" r="4.6" fill="#e9ffff" fillOpacity=".8"/>
+          <circle className="apnaab-bubble apnaab-bubble-four" cx="257" cy="565" r="3.8" fill="#e9ffff" fillOpacity=".82"/>
+          <circle className="apnaab-bubble apnaab-bubble-five" cx="112" cy="624" r="3.6" fill="#e9ffff" fillOpacity=".8"/>
+          <circle className="apnaab-bubble apnaab-bubble-six" cx="226" cy="578" r="3.2" fill="#e9ffff" fillOpacity=".8"/>
         </g>
 
         <path d="M105 270C105 243 117 227 140 211C158 198 168 184 168 164V145" fill="none" stroke="#ffffff" strokeOpacity=".78" strokeWidth="5" strokeLinecap="round"/>
