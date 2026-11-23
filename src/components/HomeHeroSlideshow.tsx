@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { whatsappUrl } from "@/lib/site";
 import WaterBottleVisual from "@/components/WaterBottleVisual";
+import HomeHeroBackground from "@/components/HomeHeroBackground";
 
 export default function HomeHeroSlideshow() {
   return (
     <section className="home-hero" aria-labelledby="home-hero-title">
+      <HomeHeroBackground />
       <div className="container home-hero-grid">
         <div className="home-hero-content">
           <h1 id="home-hero-title">Your Brand.<br /><em>On Every Bottle.</em></h1>
