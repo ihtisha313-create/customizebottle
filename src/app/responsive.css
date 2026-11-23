@@ -525,3 +525,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .home-hero-visual .apnaab-product-stage { min-height: 265px; }
   .home-hero-visual .apnaab-bottle-svg { width: 165px; max-height: 255px; }
 }
+
+/* Keep the animated water ripple behind the bottle illustration. */
+.home-hero-visual .apnaab-product-stage { position: relative; z-index: 1; }

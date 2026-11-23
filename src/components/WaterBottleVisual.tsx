@@ -19,6 +19,8 @@ export default function WaterBottleVisual({
   const cap = `${id}-cap`;
   const labelFill = `${id}-label`;
   const clip = `${id}-clip`;
+  const gloss = `${id}-gloss`;
+  const labelClip = `${id}-label-clip`;
 
   return (
     <div className={compact ? "water-product-stage apnaab-product-stage is-compact" : "water-product-stage apnaab-product-stage"} role="img" aria-label="APNAAB realistic clear 500 millilitre PET drinking-water bottle illustration">
@@ -50,7 +52,15 @@ export default function WaterBottleVisual({
             <stop offset=".58" stopColor="#e9f9fb"/>
             <stop offset="1" stopColor="#ccecf0"/>
           </linearGradient>
+          <linearGradient id={gloss} x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stopColor="#ffffff" stopOpacity="0"/>
+            <stop offset=".38" stopColor="#ffffff" stopOpacity=".04"/>
+            <stop offset=".52" stopColor="#ffffff" stopOpacity=".48"/>
+            <stop offset=".64" stopColor="#d8ffff" stopOpacity=".12"/>
+            <stop offset="1" stopColor="#ffffff" stopOpacity="0"/>
+          </linearGradient>
           <clipPath id={clip}><path d={bottlePath}/></clipPath>
+          <clipPath id={labelClip}><rect x="98" y="319" width="184" height="139" rx="10"/></clipPath>
         </defs>
 
         <ellipse cx="190" cy="681" rx="105" ry="16" fill="#00374d" opacity=".18"/>
@@ -65,12 +75,18 @@ export default function WaterBottleVisual({
           <circle cx="124" cy="490" r="4" fill="#e5ffff" opacity=".44"/>
           <circle cx="257" cy="473" r="3" fill="#e5ffff" opacity=".5"/>
           <circle cx="145" cy="554" r="2.5" fill="#e5ffff" opacity=".42"/>
+          <circle className="apnaab-bubble apnaab-bubble-one" cx="132" cy="584" r="4" fill="#e9ffff" fillOpacity=".8"/>
+          <circle className="apnaab-bubble apnaab-bubble-two" cx="245" cy="614" r="2.8" fill="#e9ffff" fillOpacity=".75"/>
+          <circle className="apnaab-bubble apnaab-bubble-three" cx="169" cy="629" r="3.2" fill="#e9ffff" fillOpacity=".72"/>
+          <circle className="apnaab-bubble apnaab-bubble-four" cx="257" cy="565" r="2.2" fill="#e9ffff" fillOpacity=".72"/>
         </g>
 
         <path d="M105 270C105 243 117 227 140 211C158 198 168 184 168 164V145" fill="none" stroke="#ffffff" strokeOpacity=".78" strokeWidth="5" strokeLinecap="round"/>
         <path d="M276 276C276 248 264 229 244 215C227 203 213 190 213 164V145" fill="none" stroke="#64b6c9" strokeOpacity=".55" strokeWidth="3" strokeLinecap="round"/>
         <path d="M109 285V590C109 615 120 636 142 645" fill="none" stroke="#ffffff" strokeOpacity=".72" strokeWidth="8" strokeLinecap="round"/>
         <path d="M272 290V596C272 620 260 639 241 648" fill="none" stroke="#ffffff" strokeOpacity=".5" strokeWidth="4" strokeLinecap="round"/>
+        <path className="apnaab-bottle-sheen" d="M48 220L91 220L278 667L235 667Z" fill={`url(#${gloss})`} clipPath={`url(#${clip})`}/>
+        <path className="apnaab-cap-glint" d="M163 47V88" fill="none" stroke="#e6ffff" strokeOpacity=".72" strokeWidth="3" strokeLinecap="round"/>
 
         <path d="M90 583C122 595 258 595 290 583M91 600C125 613 255 613 289 600M101 622C137 635 243 635 279 622" fill="none" stroke="#eaffff" strokeOpacity=".32" strokeWidth="3"/>
         <path d="M110 642C133 661 247 661 270 642" fill="none" stroke="#f4ffff" strokeOpacity=".8" strokeWidth="4"/>
@@ -92,6 +108,9 @@ export default function WaterBottleVisual({
         <path d="M135 438H245" stroke="#0e9fa7" strokeOpacity=".45" strokeWidth="1.5"/>
         <text x="190" y="448" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="7" fontWeight="700" letterSpacing="1.4" fill="#527987">YOUR IDENTITY · YOUR LABEL</text>
         <text x="260" y="623" textAnchor="end" fontFamily="Arial, sans-serif" fontSize="12" fontWeight="800" fill="#efffff" stroke="#0b5975" strokeOpacity=".34" strokeWidth=".6">500 ml</text>
+        <g className="apnaab-label-shimmer" clipPath={`url(#${labelClip})`}>
+          <path d="M91 310L116 310L205 465L180 465Z" fill={`url(#${gloss})`}/>
+        </g>
       </svg>
       {caption ? <div className="water-stage-caption"><span>{caption}</span><i /></div> : null}
     </div>
