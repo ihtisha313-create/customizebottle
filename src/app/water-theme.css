@@ -1714,7 +1714,7 @@ main { position: relative; z-index: 1; }
   .home-hero-surface-ripple { opacity: .22; }
   .home-hero-bubble-field { left: 24%; }
   .hero-bubble { opacity: .0; animation-duration: 18s; }
-  .hero-bubble-1, .hero-bubble-2, .hero-bubble-4, .hero-bubble-6, .hero-bubble-7 { opacity: 0; }
+  .hero-bubble-1, .hero-bubble-2, .hero-bubble-4, .hero-bubble-6, .hero-bubble-7 { display: none; }
   .home-hero-glass-shimmer { opacity: .0; }
 }
 @media (max-width: 560px) {
@@ -1736,3 +1736,16 @@ main { position: relative; z-index: 1; }
   .home-hero-caustic-field { opacity: .14; transform: none; }
   .home-hero-surface-ripple, .home-hero-glass-shimmer, .home-hero-bubble-field { display: none; }
 }
+
+
+/* Data-saving mode: keep the poster and a restrained static colour treatment. */
+.home-hero-media.is-static .home-hero-video { display: none; }
+.home-hero-media.is-static .home-hero-visual-effects * {
+  animation: none !important;
+  transition: none !important;
+}
+.home-hero-media.is-static .home-hero-light-rays { opacity: .10; }
+.home-hero-media.is-static .home-hero-caustic-field { opacity: .12; transform: none; }
+.home-hero-media.is-static .home-hero-surface-ripple,
+.home-hero-media.is-static .home-hero-glass-shimmer,
+.home-hero-media.is-static .home-hero-bubble-field { display: none; }
