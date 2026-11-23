@@ -6,26 +6,26 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "How It Works | Custom Bottle Ordering Process",
-  description: "See how to order customized drinking-water bottles, from sharing your logo and approving the design to quotation and delivery coordination.",
+  description: "A simple guide to ordering custom-labelled 500 ml bottled water, from sharing your logo to approving the quotation and arranging delivery.",
   alternates: { canonical: "/how-it-works" },
 };
 
 const steps = [
-  { number: "01", title: "Share your requirements", text: "Tell us your business type, delivery city, estimated quantity and label preferences. You can share your logo and business details through WhatsApp.", icon: "message" as const },
-  { number: "02", title: "Discuss your label direction", text: "We discuss how your logo, colours and approved information can be arranged on the label. Existing artwork can be shared as a starting point.", icon: "palette" as const },
-  { number: "03", title: "Review the quotation", text: "We confirm the product details, quantity, label requirements, pricing and delivery arrangements in a quotation for your review.", icon: "file" as const },
-  { number: "04", title: "Approve before production", text: "You review the final label artwork and written order details. Production is arranged only after the agreed design and quotation are approved.", icon: "check" as const },
-  { number: "05", title: "Order preparation and delivery", text: "The confirmed order is prepared with the agreed bottled-water, cap, seal and label specifications. Delivery timing and destination are coordinated with you.", icon: "truck" as const },
+  { number: "01", title: "Tell us what you need", text: "Tell us what kind of business or event the bottles are for, how many you need and where they should be delivered. You can send your logo on WhatsApp.", icon: "message" as const },
+  { number: "02", title: "Plan your label", text: "Share your logo, colours and the wording you want on the label. If you already have artwork, send it as a reference.", icon: "palette" as const },
+  { number: "03", title: "Review your quotation", text: "We set out the bottle details, label, quantity, price and delivery arrangements so you can review the complete quotation.", icon: "file" as const },
+  { number: "04", title: "Approve the design and details", text: "Check the label artwork and order details carefully. We proceed only after you approve the design and written quotation.", icon: "check" as const },
+  { number: "05", title: "Prepare and arrange delivery", text: "Your order is arranged to the agreed bottle, cap, seal and label specifications. We confirm the delivery destination and timing with you.", icon: "truck" as const },
 ];
 
 const faqs = [
-  { q: "What is the minimum order quantity?", a: "The current minimum order is 500 bottles per order. Contact us to discuss your expected quantity and delivery city." },
-  { q: "Which bottle size is currently featured?", a: "Our starting offer is a 500 ml customized drinking-water bottle. Any additional size or format must be confirmed before it is advertised or quoted." },
-  { q: "What do I need to provide for the label?", a: "You can share your business name, logo, preferred colours and the exact information you want displayed. Please check spelling and details before approving final artwork." },
-  { q: "Does the order include water, a cap and a seal?", a: "The service is planned around complete filled, capped, sealed and custom-labelled bottles. Exact product specifications are listed in the quotation before you confirm an order." },
-  { q: "How much does a customized bottle cost?", a: "Pricing depends on the agreed bottle and label specifications, quantity and delivery arrangements. We provide a quotation after understanding your requirements." },
-  { q: "Can you deliver outside Peshawar?", a: "Share your delivery city with your inquiry. Availability, delivery cost and timing are confirmed individually before an order is accepted." },
-  { q: "When does production start?", a: "Production arrangements begin after you have reviewed and approved the final design and written quotation, subject to the agreed order terms." },
+  { q: "What is the minimum order?", a: "The current minimum is 500 bottles per order. Tell us your expected quantity and delivery city when you contact us." },
+  { q: "Which bottle size do you offer?", a: "Our current offer is a custom-labelled 500 ml drinking-water bottle. Ask us about other sizes; availability must be confirmed before we quote them." },
+  { q: "What do you need from me for the label?", a: "Send your business name, logo, preferred colours and the wording you want displayed. You’ll have a chance to check the spelling and details before approving the final artwork." },
+  { q: "Does the order include the filled bottle, cap and seal?", a: "Yes. The service is planned as a complete filled, capped, sealed and custom-labelled bottle order. The exact specifications will be written in your quotation for you to review." },
+  { q: "How much will my bottles cost?", a: "The price depends on the bottle and label details, order quantity and delivery arrangements. Send us your requirements and we’ll prepare a quotation." },
+  { q: "Do you deliver outside Peshawar?", a: "Let us know your city. We’ll confirm whether delivery is available, along with the cost and estimated timing, before accepting the order." },
+  { q: "When will my order be prepared?", a: "We arrange preparation after you approve the final design and written quotation, subject to the agreed order terms." },
 ];
 
 export default function HowItWorksPage() {
@@ -33,16 +33,16 @@ export default function HowItWorksPage() {
     <>
       <WaterHero
         eyebrow="HOW IT WORKS"
-        title={<>From your idea<br /><em>to your bottle.</em></>}
-        description="A straightforward process that keeps you informed at every important step."
+        title={<>From first message<br /><em>to your bottle order.</em></>}
+        description="Know what to expect at each step, from your first inquiry to delivery planning."
         meta={<><span><Icon name="package" size={16}/> Minimum {siteConfig.minimumOrder} bottles</span><span><Icon name="check" size={16}/> Design approval first</span></>}
       />
       <section className="section">
         <div className="container">
           <div className="section-heading centered">
-            <span className="eyebrow">THE ORDERING JOURNEY</span>
-            <h2>Five steps to a <em>customized order.</em></h2>
-            <p>We keep the process clear, so you know what is needed from the first inquiry to delivery coordination.</p>
+            <span className="eyebrow">HOW YOUR ORDER TAKES SHAPE</span>
+            <h2>Five clear steps.<br /><em>One custom order.</em></h2>
+            <p>We’ll guide you through the details and confirm the important parts with you before your order goes ahead.</p>
           </div>
           <div className="process-list">
             {steps.map((step, i) => (
@@ -57,9 +57,9 @@ export default function HowItWorksPage() {
       <section className="section soft-section">
         <div className="container">
           <div className="section-heading centered">
-            <span className="eyebrow">FREQUENTLY ASKED QUESTIONS</span>
-            <h2>Before you <em>place an inquiry.</em></h2>
-            <p>Helpful answers to common questions about customized bottle orders.</p>
+            <span className="eyebrow">COMMON QUESTIONS</span>
+            <h2>A few things you may <em>want to know.</em></h2>
+            <p>Here are answers to questions customers often ask before requesting a quote.</p>
           </div>
           <div className="faq-list">
             {faqs.map((faq, i) => (
@@ -70,7 +70,7 @@ export default function HowItWorksPage() {
       </section>
       <section className="closing-cta">
         <div className="container closing-cta-inner">
-          <div><span className="eyebrow">HAVE YOUR REQUIREMENTS READY?</span><h2>Let's discuss your <em>first order.</em></h2><p>Send us your expected quantity and delivery city to begin.</p></div>
+          <div><span className="eyebrow">READY TO GET STARTED?</span><h2>Let's plan your <em>first order.</em></h2><p>Send us your expected quantity, label idea and delivery city to get started.</p></div>
           <Link href="/contact" className="button button-primary button-large">Request a quote <Icon name="arrow" size={18}/></Link>
         </div>
       </section>

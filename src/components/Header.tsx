@@ -35,7 +35,7 @@ export default function Header() {
           {links.map(link => <Link key={link.href} href={link.href} onClick={() => setOpen(false)}>{link.label}</Link>)}
           <LanguageSwitcher />
           <a className="button button-primary nav-quote" href={whatsappUrl("Hello APNAAB, I would like to request a quotation for customized bottled water.")} target="_blank" rel="noreferrer">
-            <Icon name="whatsapp" size={17}/> Request a Quote
+            <Icon name="whatsapp" size={17}/> Get a Quote
           </a>
         </nav>
       </div>

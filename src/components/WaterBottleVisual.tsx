@@ -93,7 +93,7 @@ export default function WaterBottleVisual({
         <text x="190" y="448" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="7" fontWeight="700" letterSpacing="1.4" fill="#527987">YOUR IDENTITY · YOUR LABEL</text>
         <text x="260" y="623" textAnchor="end" fontFamily="Arial, sans-serif" fontSize="12" fontWeight="800" fill="#efffff" stroke="#0b5975" strokeOpacity=".34" strokeWidth=".6">500 ml</text>
       </svg>
-      <div className="water-stage-caption"><span>{caption}</span><i /></div>
+      {caption ? <div className="water-stage-caption"><span>{caption}</span><i /></div> : null}
     </div>
   );
 }
