@@ -21,7 +21,8 @@ export default function HomeHeroBackground() {
       }
     ).connection;
 
-    // Keep the still poster on accessibility and low-bandwidth connections.
+    // Preserve instant poster rendering for visitors who prefer reduced motion
+    // or are using a data-saving / very slow mobile connection.
     if (
       motionPreference.matches ||
       connection?.saveData ||
@@ -43,7 +44,7 @@ export default function HomeHeroBackground() {
       }
 
       void video.play().catch(() => {
-        // The optimized poster remains visible when autoplay is unavailable.
+        // Keep the still poster visible when autoplay is unavailable.
       });
     };
 
@@ -87,6 +88,24 @@ export default function HomeHeroBackground() {
       >
         <source src={VIDEO} type="video/mp4" />
       </video>
+
+      <div className="home-hero-visual-effects">
+        <span className="home-hero-light-rays" />
+        <span className="home-hero-caustic-field" />
+        <span className="home-hero-surface-ripple" />
+        <span className="home-hero-glass-shimmer" />
+        <div className="home-hero-bubble-field">
+          <i className="hero-bubble hero-bubble-1" />
+          <i className="hero-bubble hero-bubble-2" />
+          <i className="hero-bubble hero-bubble-3" />
+          <i className="hero-bubble hero-bubble-4" />
+          <i className="hero-bubble hero-bubble-5" />
+          <i className="hero-bubble hero-bubble-6" />
+          <i className="hero-bubble hero-bubble-7" />
+          <i className="hero-bubble hero-bubble-8" />
+          <i className="hero-bubble hero-bubble-9" />
+        </div>
+      </div>
     </div>
   );
 }
